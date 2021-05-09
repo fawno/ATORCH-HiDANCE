@@ -1,0 +1,8 @@
+{
+	"name": "fawno/hidance",
+	"description": "HiDANCE E-meters",
+	"minimum-stability": "dev",
+	"require": {
+		"blamebutton/php-serial": "dev-master"
+	}
+}
