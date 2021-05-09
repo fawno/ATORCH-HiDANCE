@@ -1,8 +1,26 @@
 {
 	"name": "fawno/hidance",
-	"description": "HiDANCE E-meters",
+  "version": "0.0.2",
+	"description": "HiDANCE E-meters PHP interface",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Fawno",
+      "homepage": "https://github.com/fawno/HiDANCE/graphs/contributors"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/fawno/HiDANCE/issues",
+    "source": "https://github.com/fawno/HiDANCE"
+  },
 	"minimum-stability": "dev",
 	"require": {
+		"php": ">=5.6.0",
 		"blamebutton/php-serial": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "Fawno\\HiDANCE\\": "src"
+    }
 	}
 }

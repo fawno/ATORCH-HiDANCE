@@ -1,5 +1,5 @@
 <?php
-	namespace Fawno\JDY;
+	namespace Fawno\HiDANCE;
 
 	use SerialConnection\SerialConnection;
 

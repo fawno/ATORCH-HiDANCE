@@ -1,7 +1,7 @@
 <?php
 	require __DIR__ . '/autoload.php';
 
-	use Fawno\JDY\J7H;
+	use Fawno\HiDANCE\J7H;
 
 	$jdy = new J7H('COM8');
 

@@ -1,7 +1,7 @@
 <?php
-	namespace Fawno\JDY;
+	namespace Fawno\HiDANCE;
 
-	use Fawno\JDY\JDY16;
+	use Fawno\HiDANCE\JDY16;
 
 	class J7H extends JDY16 {
 		protected const SIGNAL_CONN  = '\+CONNECTED>>0x[0-9A-F]{12}\r\n';

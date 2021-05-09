@@ -5,7 +5,7 @@
 [![GitHub issues](https://img.shields.io/github/issues/fawno/HiDANCE)](https://github.com/fawno/HiDANCE/issues)
 [![GitHub forks](https://img.shields.io/github/forks/fawno/HiDANCE)](https://github.com/fawno/HiDANCE/network)
 [![GitHub stars](https://img.shields.io/github/stars/fawno/HiDANCE)](https://github.com/fawno/HiDANCE/stargazers)
-[![Documentation](https://img.shields.io/badge/documentation-blue)](docs/documentation.md)
+[![Documentation](https://img.shields.io/badge/documentation-blue)](docs/README.md)
 
 # HiDANCE E-meters interface in PHP
 
