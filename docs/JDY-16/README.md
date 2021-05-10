@@ -119,7 +119,7 @@ Brief function introduction of JDY-16-V1.2 version
 
 [:link: Null-modem emulator (com0com)](http://com0com.sourceforge.net/)
 
-[![Null-modem emulator (com0com)](img/Null-modem%20emulator%20(com0com).jpg)](http://com0com.sourceforge.net/)
+[![Null-modem emulator (com0com)](img/Null-modem%20emulator%20(com0com).png)](http://com0com.sourceforge.net/)
 
 [TOC](#table-of-contents)
 
