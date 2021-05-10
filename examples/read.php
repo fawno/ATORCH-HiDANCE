@@ -4,6 +4,7 @@
 	use Fawno\HiDANCE\J7H;
 
 	$jdy = new J7H('COM8');
+	echo $jdy->sendAT();
 
 	//$filename = strftime('data/jdy-%Y%m%d-%H%M.raw');
 	$filename = null;

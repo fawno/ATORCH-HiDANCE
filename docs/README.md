@@ -1,7 +1,7 @@
 # Documentation
 
 #### HiDANCE J7-H USB Energy Meter
-- [J7-H User Manual](J7-H/J7-H.md)
+- [J7-H User Manual](J7-H)
 
 #### JDY-16 High Speed Transparent Transmission Bluetooth Module
 - [JDY-16 v1.2 (English manual)](JDY-16/JDY-16%20v1.2%20(English%20manual).pdf)
