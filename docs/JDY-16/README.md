@@ -221,12 +221,12 @@ AT instruction: [AT+STARTEN](#settings--queries---boot-sleep-and-wake-up-reading
 [TOC](#table-of-contents)
 
 ## Dimensional drawing
-![Dimensional drawing](img/Dimensional%20drawing.jpg)
+![Dimensional drawing](img/dimensional-drawing.svg)
 
 [TOC](#table-of-contents)
 
 ## Pin definition
-![Pin definition](img/Pin%20definition.jpg)
+![Pin definition](img/pin-definition.svg)
 
 [TOC](#table-of-contents)
 
