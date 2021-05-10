@@ -663,24 +663,28 @@ Send： AT+PERM10110
 
 ## JDY-16 basic application wiring diagram
 ### 1. Wiring diagram of serial port communication mode
+
 ![Wiring diagram of serial port communication mode](img/Wiring%20diagram%20of%20serial%20port%20communication%20mode.jpg)
 
 [TOC](#table-of-contents)
 
 ### 2. Wiring diagram of IIC communication mode
 Low cost MCU without UART can be connected by IIC mode.
+
 ![Wiring diagram of IIC communication mode](img/Wiring%20diagram%20of%20IIC%20communication%20mode.jpg)
 
 [TOC](#table-of-contents)
 
 ### 3. IO control wiring diagram
 It is applied to switch control and other applications.
+
 ![IO control wiring diagram](img/IO%20control%20wiring%20diagram.jpg)
 
 [TOC](#table-of-contents)
 
 ### 4. PWM control wiring diagram
 It is applied to motor high speed and LED lamp PWM control.
+
 ![PWM control wiring diagram](img/PWM%20control%20wiring%20diagram.jpg)
 
 [TOC](#table-of-contents)
