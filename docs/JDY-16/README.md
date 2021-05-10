@@ -75,6 +75,28 @@ Module version number：JDY-16-V1.2
 	- [Settings / Queries - Serial port parity check bit](#settings--queries---serial-port-parity-check-bit)
 	- [Settings / Queries - WeChat (automatic, manual) test mode](#settings--queries---wechat-automatic-manual-test-mode)
 	- [Settings / Queries - Broadcast indicating LED lamp](#settings--queries---broadcast-indicating-led-lamp)
+- [IIC communication format](#iic-communication-format)
+- [Mobile terminal instructions](#mobile-terminal-instructions)
+	- [APP UUID list](#app-uuid-list)
+	- [APP command usage instructions (IO)](#app-command-usage-instructions-io)
+		- [1. APP transparent transmission (using feature UUID:FFE2)](#1-app-transparent-transmission-using-feature-uuidffe2)
+		- [2. APP control IO port (using feature UUID:FFE2)](#2-app-control-io-port-using-feature-uuidffe2)
+		- [3. APP setting and reading iBeacon UUID (using feature UUID:FFE2)](#3-app-setting-and-reading-ibeacon-uuid-using-feature-uuidffe2)
+		- [4. APP setting iBeacon MAJOR (using feature UUID:FFE2)](#4-app-setting-ibeacon-major-using-feature-uuidffe2)
+		- [5. APP setting iBeacon MINOR (using feature UUID:FFE2)](#5-app-setting-ibeacon-minor-using-feature-uuidffe2)
+		- [6. APP setting iBeacon SING (using feature UUID:FFE2)](#6-app-setting-ibeacon-sing-using-feature-uuidffe2)
+		- [7. APP sets Bluetooth broadcast name (using feature UUID:FFE2)](#7-app-sets-bluetooth-broadcast-name-using-feature-uuidffe2)
+		- [8. APP setting and read Connection password (use feature UUID:FFE2)](#8-app-setting-and-read-connection-password-use-feature-uuidffe2)
+		- [9. APP reset Bluetooth module (use feature UUID:FFE2)](#9-app-reset-bluetooth-module-use-feature-uuidffe2)
+		- [10. APP request hardware active disconnect from APP (use feature UUID:FFE2)](#10-app-request-hardware-active-disconnect-from-app-use-feature-uuidffe2)
+		- [11. APP read module version (using feature UUID:FFE2)](#11-app-read-module-version-using-feature-uuidffe2)
+		- [12. APP read module MAC address (using feature UUID:FFE2)](#12-app-read-module-mac-address-using-feature-uuidffe2)
+		- [13. APP control PWM switch (using feature UUID:FFE2)](#13-app-control-pwm-switch-using-feature-uuidffe2)
+- [JDY-16 basic application wiring diagram](#jdy-16-basic-application-wiring-diagram)
+	- [1. Wiring diagram of serial port communication mode](#1-wiring-diagram-of-serial-port-communication-mode)
+	- [2. Wiring diagram of IIC communication mode](#2-wiring-diagram-of-iic-communication-mode)
+	- [3. IO control wiring diagram](#3-io-control-wiring-diagram)
+	- [4. PWM control wiring diagram](#4-pwm-control-wiring-diagram)
 
 ## Version
 Brief function introduction of JDY-16-V1.2 version
@@ -88,6 +110,8 @@ Brief function introduction of JDY-16-V1.2 version
 8. Support PWM function (can be controlled by UART, IIC, APP, etc.)
 9. Support UART and IIC communication mode, default to UART communication
 
+[TOC](#table-of-contents)
+
 ## JDY debugging tool
 [:link: Termite](https://www.compuphase.com/software_termite.htm): a simple RS232 terminal:
 
@@ -97,8 +121,12 @@ Brief function introduction of JDY-16-V1.2 version
 
 [![Null-modem emulator (com0com)](img/Null-modem%20emulator%20(com0com).jpg)](http://com0com.sourceforge.net/)
 
+[TOC](#table-of-contents)
+
 ## Product brief introduction
 The JDY-16 transmission module is based on Bluetooth 4.2 standard, the working frequency is 2.4GHZ, the modulation mode is GFSK, the maximum transmission power is 0db, and the maximum transmission distance is 80 meters, using imported original chip design, which supports users to modify the name of the device, service UUID, transmit power, pairing passwords and other instructions through the AT command, convenient and flexible to use.
+
+[TOC](#table-of-contents)
 
 ## Brief introduction of the function
 1. WeChat transparent transmission (support for AirSync protocol, applied to WeChat H5 or manufacturer server communication)
@@ -109,6 +137,8 @@ The JDY-16 transmission module is based on Bluetooth 4.2 standard, the working f
 6. IO mode (applied to mobile phone control relay or LED lighting)
 7. RTC function
 8. PWM support (APP, IIC, APP, WeChat applet) control
+
+[TOC](#table-of-contents)
 
 ## Electrical characteristics
 | Working mode                | Broadcast state           | Current | Remarks   |
@@ -132,6 +162,8 @@ The JDY-16 transmission module is based on Bluetooth 4.2 standard, the working f
 1. Generally communicate with APP connection, it suggests broadcast should not be set too long, which will affect the connection time. It is generally recommended between 100 to 500mS, and if you need to connect fast and no power requirements, broadcast intervals can be set to the shortest.
 2. Under connection state, the AT command can be pulled down by PWRC pin or the working mode is set directly, please see the AT+STARTEN instructions
 
+[TOC](#table-of-contents)
+
 ## Description of JDY-16 sleep mode
 AT instruction: [AT+STARTEN](#settings--queries---boot-sleep-and-wake-up-reading-and-writing)
 - **Mode 0**
@@ -144,6 +176,8 @@ AT instruction: [AT+STARTEN](#settings--queries---boot-sleep-and-wake-up-reading
   Boot sleep, connect and disconnect all sleep, APP to send data to the serial port module or module to send data automatic wake-up, after data transmission is completed, it will be automatic sleep.
 	**Note: AT+SLEEP of mode 1 is invalid.**
 	**Note: AT+SLEEP invalid mode 1, sleep controls sleep by Bluetooth module itself.**
+
+[TOC](#table-of-contents)
 
 ## FAQ
 1. **How does MCU disconnect Bluetooth connection under connection state?**
@@ -160,6 +194,8 @@ AT instruction: [AT+STARTEN](#settings--queries---boot-sleep-and-wake-up-reading
 6. **Parameters of serial port or IIC configuration, is the power up stored next time?**
    After saving, configuring, the next power up is the last configuration parameter.
 
+[TOC](#table-of-contents)
+
 ## Technical parameter
 1. Serial transmission without byte limitation during transparent and transmission
 2. The effective communication distance is less than 80 meters
@@ -167,6 +203,8 @@ AT instruction: [AT+STARTEN](#settings--queries---boot-sleep-and-wake-up-reading
 4. The communication rate is 8K Bytes per second
 5. Support the communication between UART and IIC
 6. Working voltage 1.8 - 3.3V
+
+[TOC](#table-of-contents)
 
 ## Default parameter configuration for factory
 1. Communication mode: UART（**SELECT pin hanging**）
@@ -180,11 +218,17 @@ AT instruction: [AT+STARTEN](#settings--queries---boot-sleep-and-wake-up-reading
 
 **If the default configuration parameters above cannot meet the requirements, you can contact the service or FAE**
 
+[TOC](#table-of-contents)
+
 ## Dimensional drawing
 ![Dimensional drawing](img/Dimensional%20drawing.jpg)
 
+[TOC](#table-of-contents)
+
 ## Pin definition
 ![Pin definition](img/Pin%20definition.jpg)
+
+[TOC](#table-of-contents)
 
 ## Pin function description
 |Pin | Function  | Description                                                                                                                                                                                                                                                                                     |
@@ -213,6 +257,8 @@ AT instruction: [AT+STARTEN](#settings--queries---boot-sleep-and-wake-up-reading
 | 22 | PWRC      | When the AT instruction is required to be sent in the connection state, the AT instruction mode can be displayed by maintaining the low electrical level of the pin. In the unconnected state, this pin is AT command mode regardless of the high and low electrical levels                     |
 | 23 | RESET     | Hardware reset pin                                                                                                                                                                                                                                                                              |
 | 24 | GND       | Power ground                                                                                                                                                                                                                                                                                    |
+
+[TOC](#table-of-contents)
 
 ## Serial port AT instruction set
 :warning: JDY-16 module serial port send AT instruction must add \r\n, AT does not distinguish case
@@ -263,6 +309,8 @@ AT instruction: [AT+STARTEN](#settings--queries---boot-sleep-and-wake-up-reading
 |  42  | AT+PWM4PUS  | PWM4 pulse width                            |      M/S       |                            | 10                               |
 |  43  | AT+ALED     | Broadcast  indicating  LED switch           |      M/S       |                            | Open                             |
 
+[TOC](#table-of-contents)
+
 ## AT instruction description
 **Special note: JDY-16 module serial port instruction AT need to add terminator \r\n**
 
@@ -289,10 +337,14 @@ The above configuration Parameter sends AT+PERM, returns Parameter is: +PERM=001
 The example opens the APP settings (broadcast name, IO, PWM) permissions
 Send： AT+PERM10110
 
+[TOC](#table-of-contents)
+
 ### Soft reset
 | Instruction     | Response       | Parameter |
 |-----------------|----------------|-----------|
 | AT+RST          | +OK            | None      |
+
+[TOC](#table-of-contents)
 
 ### Settings / Queries - Device style
 | Instruction     | Response       | Parameter                       |
@@ -300,10 +352,14 @@ Send： AT+PERM10110
 | AT+CLSS\<Param> | +OK            | Param (00-FF)<br> Default: 0xA0 |
 | AT+CLSS         | +CLSS=\<Param> |                                 |
 
+[TOC](#table-of-contents)
+
 ### Restore factory configuration (revert to factory default configuration Parameter)
 | Instruction     | Response       | Parameter          |
 |-----------------|----------------|--------------------|
 | AT+DEFAULT      | +OK            | None               |
+
+[TOC](#table-of-contents)
 
 ### Settings / Queries - Boot sleep and wake up reading and writing
 | Instruction        | Response          | Parameter                   |
@@ -320,6 +376,8 @@ Send： AT+PERM10110
 
 [Description of JDY-16 sleep mode](#description-of-jdy-16-sleep-mode)
 
+[TOC](#table-of-contents)
+
 ### Settings / Queries - Sleep Instruction (can broadcast under sleep state)
 | Instruction      | Response  | Parameter   |
 |------------------|-----------|-------------|
@@ -331,6 +389,8 @@ Send： AT+PERM10110
 |-------|---------------------------|
 |   1   | light sleep (Broadcast)   |
 |   2   | deep sleep (No Broadcast) |
+
+[TOC](#table-of-contents)
 
 ### Settings / Queries - Baud rate
 :warning: **Note: the default baud rate of the module is: 115200**
@@ -352,10 +412,14 @@ Send： AT+PERM10110
 |   8   |    115200 |
 |   9   |    230400 |
 
+[TOC](#table-of-contents)
+
 ### Settings -  Disconnect
 | Instruction     | Response       | Parameter          |
 |-----------------|----------------|--------------------|
 | AT+DISC      | +OK            | None               |
+
+[TOC](#table-of-contents)
 
 ### Settings / Queries - Broadcast switch
 | Instruction      | Response        | Parameter                  |
@@ -369,6 +433,8 @@ Send： AT+PERM10110
 |   0   | Stop Broadcast |
 |   1   | Open Broadcast |
 
+[TOC](#table-of-contents)
+
 ### Settings / Queries - Mode work pattern
 | Instruction         | Response           | Parameter                  |
 |---------------------|--------------------|----------------------------|
@@ -381,6 +447,8 @@ Send： AT+PERM10110
 |   0   | Slave (APP, WeChat, small program) transparent transmission |
 |   1   | Master transparent transmission mode                        |
 |   3   | Slave (iBeacon) mode                                        |
+
+[TOC](#table-of-contents)
 
 ### Settings / Queries - Broadcast interval
 | Instruction      | Response        | Parameter                  |
@@ -402,65 +470,217 @@ Send： AT+PERM10110
 |   8   |     900ms   |
 |   9   |    1000ms   |
 
+[TOC](#table-of-contents)
+
 ### Settings / Queries - Broadcast name
+
+[TOC](#table-of-contents)
 
 ### Settings / Queries - MAC address (The MAC address of the module can be changed)
 
+[TOC](#table-of-contents)
+
 ### Settings / Queries - Transmit power
+
+[TOC](#table-of-contents)
 
 ### iBeacon (iBeacon mode Instruction)
 #### Settings / Queries - iBeacon UUID (iBeacon mode Instruction)
 
+[TOC](#table-of-contents)
+
 #### Settings / Queries - iBeacon Major (iBeacon mode Instruction)
+
+[TOC](#table-of-contents)
 
 #### Settings / Queries - iBeacon Minor (iBeacon mode Instruction)
 
+[TOC](#table-of-contents)
+
 #### Settings / Queries - iBeacon IBSING (iBeacon mode Instruction)
+
+[TOC](#table-of-contents)
 
 #### Queries - Version number (iBeacon mode Instruction)
 
+[TOC](#table-of-contents)
+
 ### Settings / Queries - Manufacturer identification code (iBeacon mode Instruction)
+
+[TOC](#table-of-contents)
 
 ### Settings / Queries - Password connection switch
 
+[TOC](#table-of-contents)
+
 ### Settings / Queries - Connection password
+
+[TOC](#table-of-contents)
 
 ### Settings / Queries - Service UUID (Service UUID in APP data communication)
 
+[TOC](#table-of-contents)
+
 ### Settings / Queries - Feature UUID (Service UUID in APP data communication)
+
+[TOC](#table-of-contents)
 
 ### Settings - Master scan
 
+[TOC](#table-of-contents)
+
 ### Settings / Queries - Master connect slave
+
+[TOC](#table-of-contents)
 
 ### Settings / Queries - Master binding MAC address
 
+[TOC](#table-of-contents)
+
 ### Settings - Master cancels binding
 
+[TOC](#table-of-contents)
+
 ### Settings / Queries - Connection state
+
+[TOC](#table-of-contents)
 
 ### RTC
 #### Settings / Queries - RTC year/month/time/minute/second
 
+[TOC](#table-of-contents)
+
 #### Settings / Queries - RTC open & close
 
+[TOC](#table-of-contents)
+
 ### Settings / Queries - WeChat H5 or server selection
+
+[TOC](#table-of-contents)
 
 ### PWM
 #### Settings / Queries - PWM frequency
 
+[TOC](#table-of-contents)
+
 #### Settings / Queries - Open & close PWM
+
+[TOC](#table-of-contents)
 
 #### Settings / Queries - PWM1 pulse width
 
+[TOC](#table-of-contents)
+
 #### Settings / Queries - PWM2 pulse width
+
+[TOC](#table-of-contents)
 
 #### Settings / Queries - PWM3 pulse width
 
+[TOC](#table-of-contents)
+
 #### Settings / Queries - PWM4 pulse width
+
+[TOC](#table-of-contents)
 
 ### Settings / Queries - Serial port parity check bit
 
+[TOC](#table-of-contents)
+
 ### Settings / Queries - WeChat (automatic, manual) test mode
 
+[TOC](#table-of-contents)
+
 ### Settings / Queries - Broadcast indicating LED lamp
+
+[TOC](#table-of-contents)
+
+## IIC communication format
+
+[TOC](#table-of-contents)
+
+## Mobile terminal instructions
+### APP UUID list
+- Service UUID: FFE0 (Service UUID default FFE0 user can change)
+-	Feature UUID: FFE1 (For transparent transmission default ffe1 users can change)
+- Feature UUID: FFE2 (For module function configuration)
+
+[TOC](#table-of-contents)
+
+### APP command usage instructions (IO)
+#### 1. APP transparent transmission (using feature UUID:FFE2)
+0XFFE1 is the APP transparent transmission characteristic of UUID (It is applied to IOS, Android or WeChat applet communication)
+
+[TOC](#table-of-contents)
+
+#### 2. APP control IO port (using feature UUID:FFE2)
+
+[TOC](#table-of-contents)
+
+#### 3. APP setting and reading iBeacon UUID (using feature UUID:FFE2)
+
+[TOC](#table-of-contents)
+
+#### 4. APP setting iBeacon MAJOR (using feature UUID:FFE2)
+
+[TOC](#table-of-contents)
+
+#### 5. APP setting iBeacon MINOR (using feature UUID:FFE2)
+
+[TOC](#table-of-contents)
+
+#### 6. APP setting iBeacon SING (using feature UUID:FFE2)
+
+[TOC](#table-of-contents)
+
+#### 7. APP sets Bluetooth broadcast name (using feature UUID:FFE2)
+
+[TOC](#table-of-contents)
+
+#### 8. APP setting and read Connection password (use feature UUID:FFE2)
+
+[TOC](#table-of-contents)
+
+#### 9. APP reset Bluetooth module (use feature UUID:FFE2)
+
+[TOC](#table-of-contents)
+
+#### 10. APP request hardware active disconnect from APP (use feature UUID:FFE2)
+
+[TOC](#table-of-contents)
+
+#### 11. APP read module version (using feature UUID:FFE2)
+
+[TOC](#table-of-contents)
+
+#### 12. APP read module MAC address (using feature UUID:FFE2)
+
+[TOC](#table-of-contents)
+
+#### 13. APP control PWM switch (using feature UUID:FFE2)
+
+[TOC](#table-of-contents)
+
+## JDY-16 basic application wiring diagram
+### 1. Wiring diagram of serial port communication mode
+![Wiring diagram of serial port communication mode](img/Wiring%20diagram%20of%20serial%20port%20communication%20mode.jpg)
+
+[TOC](#table-of-contents)
+
+### 2. Wiring diagram of IIC communication mode
+Low cost MCU without UART can be connected by IIC mode.
+![Wiring diagram of IIC communication mode](img/Wiring%20diagram%20of%20IIC%20communication%20mode.jpg)
+
+[TOC](#table-of-contents)
+
+### 3. IO control wiring diagram
+It is applied to switch control and other applications.
+![IO control wiring diagram](img/IO%20control%20wiring%20diagram.jpg)
+
+[TOC](#table-of-contents)
+
+### 4. PWM control wiring diagram
+It is applied to motor high speed and LED lamp PWM control.
+![PWM control wiring diagram](img/PWM%20control%20wiring%20diagram.jpg)
+
+[TOC](#table-of-contents)
