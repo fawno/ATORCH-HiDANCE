@@ -119,7 +119,7 @@ Brief function introduction of JDY-16-V1.2 version
 
 [:link: Null-modem emulator (com0com)](http://com0com.sourceforge.net/)
 
-[![Null-modem emulator (com0com)](img/Null-modem%20emulator%20(com0com).jpg)](http://com0com.sourceforge.net/)
+[![Null-modem emulator (com0com)](img/Null-modem%20emulator%20(com0com).png)](http://com0com.sourceforge.net/)
 
 [TOC](#table-of-contents)
 
@@ -237,18 +237,18 @@ AT instruction: [AT+STARTEN](#settings--queries---boot-sleep-and-wake-up-reading
 |  2 | PWM1      | Support UART, IIC, APP control                                                                                                                                                                                                                                                                  |
 |  3 | PWM2      | Support UART, IIC, APP control                                                                                                                                                                                                                                                                  |
 |  4 | IO4       | High and low electrical level can be controlled by APP                                                                                                                                                                                                                                          |
-|  5 | NULL      |                                                                                                                                                                                                                                                                                                 |
+|  5 | NC        |                                                                                                                                                                                                                                                                                                 |
 |  6 | STAT      | **UART communication mode**: not connected low electrical level, high electrical level after connection.<br> **IIC communication mode**: not connected high electrical level, connection, disconnect or receive data will work in interrupt mode, interrupt the falling edge holding time 200ms |
-|  7 | NULL      |                                                                                                                                                                                                                                                                                                 |
-|  8 | NULL      |                                                                                                                                                                                                                                                                                                 |
+|  7 | NC        |                                                                                                                                                                                                                                                                                                 |
+|  8 | NC        |                                                                                                                                                                                                                                                                                                 |
 |  9 | IO1       | High and low electrical level can be controlled by APP                                                                                                                                                                                                                                          |
 | 10 | IO2       | High and low electrical level can be controlled by APP                                                                                                                                                                                                                                          |
-| 11 | NULL      |                                                                                                                                                                                                                                                                                                 |
-| 12 | NULL      |                                                                                                                                                                                                                                                                                                 |
+| 11 | NC        |                                                                                                                                                                                                                                                                                                 |
+| 12 | NC        |                                                                                                                                                                                                                                                                                                 |
 | 13 | IO3       | High and low electrical level can be controlled by APP                                                                                                                                                                                                                                          |
 | 14 | PWM3      | Support UART, IIC, APP control                                                                                                                                                                                                                                                                  |
 | 15 | PWM4      | Support UART, IIC, APP control                                                                                                                                                                                                                                                                  |
-| 16 | NULL      |                                                                                                                                                                                                                                                                                                 |
+| 16 | NC        |                                                                                                                                                                                                                                                                                                 |
 | 17 | ALED      | Broadcast flashes, always bright after connection (master-slave effective)                                                                                                                                                                                                                      |
 | 18 | RTCA      | RTC timing time to produce a drop edge interrupt signal, usually high electrical level                                                                                                                                                                                                          |
 | 19 | TXD_OR_DD | SELECT boot to low electrical level, the pin function of this serial port is TXD<br> SELECT boot to low electrical level, this pin function is IIC DD                                                                                                                                           |
@@ -664,27 +664,27 @@ Send： AT+PERM10110
 ## JDY-16 basic application wiring diagram
 ### 1. Wiring diagram of serial port communication mode
 
-![Wiring diagram of serial port communication mode](img/Wiring%20diagram%20of%20serial%20port%20communication%20mode.jpg)
+![Wiring diagram of serial port communication mode](img/1-wiring-diagram-of-serial-port-communication-mode.svg)
 
 [TOC](#table-of-contents)
 
 ### 2. Wiring diagram of IIC communication mode
 Low cost MCU without UART can be connected by IIC mode.
 
-![Wiring diagram of IIC communication mode](img/Wiring%20diagram%20of%20IIC%20communication%20mode.jpg)
+![Wiring diagram of IIC communication mode](img/2-wiring-diagram-of-iic-communication-mode.svg)
 
 [TOC](#table-of-contents)
 
 ### 3. IO control wiring diagram
 It is applied to switch control and other applications.
 
-![IO control wiring diagram](img/IO%20control%20wiring%20diagram.jpg)
+![IO control wiring diagram](img/3-io-control-wiring-diagram.svg)
 
 [TOC](#table-of-contents)
 
 ### 4. PWM control wiring diagram
 It is applied to motor high speed and LED lamp PWM control.
 
-![PWM control wiring diagram](img/PWM%20control%20wiring%20diagram.jpg)
+![PWM control wiring diagram](img/4-pwm-control-wiring-diagram.svg)
 
 [TOC](#table-of-contents)
