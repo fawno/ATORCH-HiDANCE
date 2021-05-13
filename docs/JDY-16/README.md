@@ -356,12 +356,11 @@ The above configuration Parameter sends AT+PERM, returns Parameter is: +PERM=001
 The example opens the APP settings (broadcast name, IO, PWM) permissions
 
 **Example**
-> **AT+PERM**
-> +PERM=01110
-> **AT+PERM10110**
-> +PERM=10110
+> **AT+PERM** \
+> +PERM=01110 \
+> **AT+PERM10110** \
+> +PERM=10110 \
 > OK
-
 
 [TOC](#table-of-contents)
 
@@ -371,7 +370,7 @@ The example opens the APP settings (broadcast name, IO, PWM) permissions
 | AT+RST          | +OK            | None      |
 
 **Example:**
-> **AT+RST**
+> **AT+RST** \
 > OK
 
 [TOC](#table-of-contents)
@@ -383,10 +382,10 @@ The example opens the APP settings (broadcast name, IO, PWM) permissions
 | AT+CLSS         | +CLSS=\<Param> |                                 |
 
 **Example:**
-> **AT+CLSS**
-> +CLSS=A0
-> **AT+CLSSA0**
-> +CLSS=A0
+> **AT+CLSS** \
+> +CLSS=A0 \
+> **AT+CLSSA0** \
+> +CLSS=A0 \
 > OK
 
 [TOC](#table-of-contents)
@@ -397,7 +396,7 @@ The example opens the APP settings (broadcast name, IO, PWM) permissions
 | AT+DEFAULT      | +OK            | None               |
 
 **Example:**
-> **AT+DEFAULT**
+> **AT+DEFAULT** \
 > OK
 
 
@@ -419,10 +418,10 @@ The example opens the APP settings (broadcast name, IO, PWM) permissions
 [Description of JDY-16 sleep mode](#description-of-jdy-16-sleep-mode)
 
 **Example:**
-> **AT+STARTEN**
-> +STARTEN=0
-> **AT+STARTEN0**
-> +STARTEN=0
+> **AT+STARTEN** \
+> +STARTEN=0 \
+> **AT+STARTEN0** \
+> +STARTEN=0 \
 > OK
 
 [TOC](#table-of-contents)
@@ -440,10 +439,10 @@ The example opens the APP settings (broadcast name, IO, PWM) permissions
 |   2   | deep sleep (No Broadcast) |
 
 **Example:**
-> **AT+SLEEP**
-> OK
-> **AT+SLEEP1**
-> OK
+> **AT+SLEEP** \
+> OK \
+> **AT+SLEEP1** \
+> OK \
 > +SLEEP
 
 [TOC](#table-of-contents)
@@ -469,10 +468,10 @@ The example opens the APP settings (broadcast name, IO, PWM) permissions
 |   9   |    230400 |
 
 **Example:**
-> **AT+BAUD**
-> +BAUD=4
-> **AT+BAUD4**
-> +BAUD=4
+> **AT+BAUD** \
+> +BAUD=4 \
+> **AT+BAUD4** \
+> +BAUD=4 \
 > OK
 
 [TOC](#table-of-contents)
@@ -483,7 +482,7 @@ The example opens the APP settings (broadcast name, IO, PWM) permissions
 | AT+DISC         | +OK            | None      |
 
 **Example:**
-> **AT+DISC**
+> **AT+DISC** \
 > OK
 
 [TOC](#table-of-contents)
@@ -501,10 +500,10 @@ The example opens the APP settings (broadcast name, IO, PWM) permissions
 |   1   | Open Broadcast |
 
 **Example:**
-> **AT+ADVEN**
-> +ADVEN=1
-> **AT+ADVEN0**
-> +ADVEN=0
+> **AT+ADVEN** \
+> +ADVEN=1 \
+> **AT+ADVEN0** \
+> +ADVEN=0 \
 > OK
 
 [TOC](#table-of-contents)
@@ -523,10 +522,10 @@ The example opens the APP settings (broadcast name, IO, PWM) permissions
 |   3   | Slave (iBeacon) mode                                        |
 
 **Example:**
-> **AT+HOSTEN**
-> +HOSTEN=0
-> **AT+HOSTEN1**
-> +HOSTEN=1
+> **AT+HOSTEN** \
+> +HOSTEN=0 \
+> **AT+HOSTEN1** \
+> +HOSTEN=1 \
 > OK
 
 [TOC](#table-of-contents)
@@ -552,10 +551,10 @@ The example opens the APP settings (broadcast name, IO, PWM) permissions
 |   9   |    1000ms   |
 
 **Example:**
-> **AT+ADVIN**
-> +ADVIN=1
-> **AT+ADVIN0**
-> +ADVIN=0
+> **AT+ADVIN** \
+> +ADVIN=1 \
+> **AT+ADVIN0** \
+> +ADVIN=0 \
 > OK
 
 [TOC](#table-of-contents)
@@ -571,10 +570,10 @@ Mode Bluetooth name.
 The longest: 18 bytes
 
 **Example:**
-> **AT+NAME**
-> +NAME=JDY-16
-> **AT+NAMEJDY-16v2.3**
-> +NAME=JDY-16v2.3
+> **AT+NAME** \
+> +NAME=JDY-16 \
+> **AT+NAMEJDY-16v2.3** \
+> +NAME=JDY-16v2.3 \
 > OK
 
 [TOC](#table-of-contents)
@@ -590,10 +589,10 @@ Mode Bluetooth name.
 The longest: 18 bytes
 
 **Example:**
-> **AT+NL**
-> +NL=JDY-16
-> **AT+NLJDY-16v2.3**
-> +NL=JDY-16v2.3
+> **AT+NL** \
+> +NL=JDY-16 \
+> **AT+NLJDY-16v2.3** \
+> +NL=JDY-16v2.3 \
 > OK
 
 ### Settings / Queries - Broadcast name F
@@ -607,10 +606,10 @@ Mode Bluetooth name.
 The longest: 18 bytes
 
 **Example:**
-> **AT+NF**
-> +NL=JDY-16
-> **AT+NFJDY-16v2.3**
-> +NL=JDY-16v2.3
+> **AT+NF** \
+> +NL=JDY-16 \
+> **AT+NFJDY-16v2.3** \
+> +NL=JDY-16v2.3 \
 > OK
 
 [TOC](#table-of-contents)
@@ -622,7 +621,7 @@ The longest: 18 bytes
 | AT+MAC         | +MAC=\<Param> |                   |
 
 **Example:**
-> AT+MAC
+> AT+MAC \
 > +MAC=3CA5197B14DC
 
 [TOC](#table-of-contents)
@@ -640,10 +639,10 @@ The longest: 18 bytes
 |   1   |       0db   |
 
 **Example:**
-> **AT+POWR**
-> +POWR=1
-> **AT+POWR0**
-> +POWR=0
+> **AT+POWR** \
+> +POWR=1 \
+> **AT+POWR0** \
+> +POWR=0 \
 > OK
 
 [TOC](#table-of-contents)
@@ -658,10 +657,10 @@ The longest: 18 bytes
 **Hexadecimal data**
 
 **Example:**
-> **AT+IBUUID**
-> +IBUUID=FDA50693A4E24FB1AFCFC6EB07647825
-> **AT+IBUUID0xFDA50693A4E24FB1AFCFC6EB07647825**
-> +IBUUID=FDA50693A4E24FB1AFCFC6EB07647825
+> **AT+IBUUID** \
+> +IBUUID=FDA50693A4E24FB1AFCFC6EB07647825 \
+> **AT+IBUUID0xFDA50693A4E24FB1AFCFC6EB07647825** \
+> +IBUUID=FDA50693A4E24FB1AFCFC6EB07647825 \
 > OK
 
 **Note**: In **Termite**, with the **Hex View** plugin, can send hexadecimal data with **0x** prefix.
@@ -675,10 +674,10 @@ The longest: 18 bytes
 | AT+MAJOR         | +MAJOR=\<Param> |                                      |
 
 **Example:**
-> **AT+MAJOR**
-> +MAJOR=000A
-> **AT+MAJOR000A**
-> +MAJOR=000A
+> **AT+MAJOR** \
+> +MAJOR=000A \
+> **AT+MAJOR000A** \
+> +MAJOR=000A \
 > OK
 
 [TOC](#table-of-contents)
@@ -690,10 +689,10 @@ The longest: 18 bytes
 | AT+MINOR         | +MINOR=\<Param> |                                      |
 
 **Example:**
-> **AT+MINOR**
-> +MINOR=0007
-> **AT+MINOR0007**
-> +MINOR=0007
+> **AT+MINOR** \
+> +MINOR=0007 \
+> **AT+MINOR0007** \
+> +MINOR=0007 \
 > OK
 
 [TOC](#table-of-contents)
@@ -706,10 +705,10 @@ The longest: 18 bytes
 **This Parameter is applied to signal check value of iBeacon within 1 meter**
 
 **Example:**
-> **AT+IBSING**
-> +IBSING=D0
-> **AT+IBSINGD0**
-> +IBSING=D0
+> **AT+IBSING** \
+> +IBSING=D0 \
+> **AT+IBSINGD0** \
+> +IBSING=D0 \
 > OK
 
 [TOC](#table-of-contents)
@@ -720,7 +719,7 @@ The longest: 18 bytes
 | AT+VER      | +VER=JDY-16-V2.3 | None      |
 
 **Example:**
-> **AT+VER**
+> **AT+VER** \
 > +VER=JDY-16-V2.3
 
 [TOC](#table-of-contents)
@@ -732,10 +731,10 @@ The longest: 18 bytes
 | AT+VID         | +VID=\<Param> |                                |
 
 **Example:**
-> **AT+VID**
-> +VID=88
-> **AT+VID88**
-> +VID=88
+> **AT+VID** \
+> +VID=88 \
+> **AT+VID88** \
+> +VID=88 \
 > OK
 
 [TOC](#table-of-contents)
@@ -753,10 +752,10 @@ The longest: 18 bytes
 |   1   | Open password connection is not bound |
 
 **Example:**
-> **AT+ISCEN**
-> +ISCEN=0
-> **AT+ISCEN1**
-> +ISCEN=1
+> **AT+ISCEN** \
+> +ISCEN=0 \
+> **AT+ISCEN1** \
+> +ISCEN=1 \
 > OK
 
 [TOC](#table-of-contents)
@@ -768,10 +767,10 @@ The longest: 18 bytes
 | AT+PASS         | +PASS=\<Param> |                                                        |
 
 **Example:**
-> **AT+PASS**
-> +PASS=123456
-> **AT+PASS654321**
-> +PASS=654321
+> **AT+PASS** \
+> +PASS=123456 \
+> **AT+PASS654321** \
+> +PASS=654321 \
 > OK
 
 [TOC](#table-of-contents)
@@ -783,9 +782,9 @@ The longest: 18 bytes
 | AT+SVRUUID         | +SVRUUID=\<Param> |                                      |
 
 **Example:**
-> **AT+SVRUUID**
-> +SVRUUID=FFE0
-> **AT+SVRUUIDFFE0**
+> **AT+SVRUUID** \
+> +SVRUUID=FFE0 \
+> **AT+SVRUUIDFFE0** \
 > OK
 
 [TOC](#table-of-contents)
@@ -797,10 +796,10 @@ The longest: 18 bytes
 | AT+CHRUUID         | +CHRUUID=\<Param> |                                      |
 
 **Example:**
->**AT+CHRUUIDFFE1**
->OK
->**AT+CHRUUID**
->+CHRUUID=FFE1
+> **AT+CHRUUIDFFE1** \
+> OK \
+> **AT+CHRUUID** \
+> +CHRUUID=FFE1
 
 [TOC](#table-of-contents)
 
@@ -810,10 +809,10 @@ The longest: 18 bytes
 | AT+SCAN     | OK       | None      |
 
 **Example:**
-> **AT+SCAN**
-> OK
-> +DEV:1=1893D711AB87,-82,JDY-08
-> +DEV:3=0F0F88100395,-82,JDY-19
+> **AT+SCAN** \
+> OK \
+> +DEV:1=1893D711AB87,-82,JDY-08 \
+> +DEV:3=0F0F88100395,-82,JDY-19 \
 > +STOP:SCAN
 
 The Master scans MAC, RSSI, and device names from the machine
@@ -831,11 +830,11 @@ The Master scans MAC, RSSI, and device names from the machine
 - Direct MAC address connection: Dev MAC
 
 **Examples:**
-> **AT+CONN3**
-> OK
-> +CONNECTED>>0x0F0F88100395
-> **AT+CONN0F0F88100395**
-> OK
+> **AT+CONN3** \
+> OK \
+> +CONNECTED>>0x0F0F88100395 \
+> **AT+CONN0F0F88100395** \
+> OK \
 > +CONNECTED>>0x0F0F88100395
 
 [TOC](#table-of-contents)
@@ -847,11 +846,11 @@ The Master scans MAC, RSSI, and device names from the machine
 | AT+BAND         | +MAC=\<Param> |              |
 
 **Examples:**
-> **AT+BAND**
-> +MAC:000000000000
-> **AT+BAND0F0F88100395**
-> OK
-> +BAND
+> **AT+BAND** \
+> +MAC:000000000000 \
+> **AT+BAND0F0F88100395** \
+> OK \
+> +BAND \
 > +CONNECTED>>0x0F0F88100395
 
 [TOC](#table-of-contents)
@@ -862,8 +861,8 @@ The Master scans MAC, RSSI, and device names from the machine
 | AT+CLRBAND  | OK       | None      |
 
 **Example**
-> **AT+CLRBAND**
-> OK
+> **AT+CLRBAND** \
+> OK \
 > +CLR:BAND
 
 [TOC](#table-of-contents)
@@ -880,7 +879,7 @@ The Master scans MAC, RSSI, and device names from the machine
 |   1   | Connected     |
 
 **Example**
-> **AT+STAT**
+> **AT+STAT** \
 > +STAT=0
 
 
@@ -894,10 +893,10 @@ The Master scans MAC, RSSI, and device names from the machine
 | AT+RTCD         | +RTCD=\<Param> |                                                               |
 
 **Examples:**
-> **AT+RTCD**
-> +RTCDATE=2016-01-01,00:00:00
-> **AT+RTCD2021-05-13,17:46:00**
-> +RTCDATE=2021-05-13,17:46:00
+> **AT+RTCD** \
+> +RTCDATE=2016-01-01,00:00:00 \
+> **AT+RTCD2021-05-13,17:46:00** \
+> +RTCDATE=2021-05-13,17:46:00 \
 > OK
 
 [TOC](#table-of-contents)
@@ -915,10 +914,10 @@ The Master scans MAC, RSSI, and device names from the machine
 |   1   | Indicates turn on the switch and switch on next time |
 
 **Example**
-> **AT+RTCOPEN**
-> +RTCOPEN=0
-> **AT+RTCOPEN1**
-> +RTCOPEN=1
+> **AT+RTCOPEN** \
+> +RTCOPEN=0 \
+> **AT+RTCOPEN1** \
+> +RTCOPEN=1 \
 > OK
 
 
@@ -937,10 +936,10 @@ The Master scans MAC, RSSI, and device names from the machine
 |   1   | Server communication |
 
 **Example**
-> **AT+WXSVR**
-> +WXSVR=0
-> **AT+WXSVR1**
-> +WXSVR=1
+> **AT+WXSVR** \
+> +WXSVR=0 \
+> **AT+WXSVR1** \
+> +WXSVR=1 \
 > OK
 
 [TOC](#table-of-contents)
@@ -956,10 +955,10 @@ The Master scans MAC, RSSI, and device names from the machine
 Param is frequency in Hz. It can be set from 30Hz to 25kHz.
 
 **Example**
-> **AT+PWMFRE**
-> +PWMFRE=0100
-> **AT+PWMFRE2000**
-> +PWMFRE=0200
+> **AT+PWMFRE** \
+> +PWMFRE=0100 \
+> **AT+PWMFRE2000** \
+> +PWMFRE=0200 \
 > OK
 
 [TOC](#table-of-contents)
@@ -977,10 +976,10 @@ Param is frequency in Hz. It can be set from 30Hz to 25kHz.
 |   1   | Open PWM    |
 
 **Example**
-> **AT+PWMOPEN**
-> +PWMOPEN=0
-> **AT+PWMOPEN1**
-> +PWMOPEN=1
+> **AT+PWMOPEN** \
+> +PWMOPEN=0 \
+> **AT+PWMOPEN1** \
+> +PWMOPEN=1 \
 > OK
 
 [TOC](#table-of-contents)
@@ -995,10 +994,10 @@ Param is frequency in Hz. It can be set from 30Hz to 25kHz.
 PWM pulse width. 255 is 100% of width.
 
 **Example**
-> **AT+PWM1PUS**
-> +PWM1PUS=10
-> **AT+PWM1PUS255**
-> +PWM1PUS=255
+> **AT+PWM1PUS** \
+> +PWM1PUS=10 \
+> **AT+PWM1PUS255** \
+> +PWM1PUS=255 \
 > OK
 
 [TOC](#table-of-contents)
@@ -1013,10 +1012,10 @@ PWM pulse width. 255 is 100% of width.
 PWM pulse width. 255 is 100% of width.
 
 **Example**
-> **AT+PWM2PUS**
-> +PWM2PUS=10
-> **AT+PWM2PUS255**
-> +PWM2PUS=255
+> **AT+PWM2PUS** \
+> +PWM2PUS=10 \
+> **AT+PWM2PUS255** \
+> +PWM2PUS=255 \
 > OK
 
 [TOC](#table-of-contents)
@@ -1031,10 +1030,10 @@ PWM pulse width. 255 is 100% of width.
 PWM pulse width. 255 is 100% of width.
 
 **Example**
-> **AT+PWM3PUS**
-> +PWM3PUS=10
-> **AT+PWM3PUS255**
-> +PWM3PUS=255
+> **AT+PWM3PUS** \
+> +PWM3PUS=10 \
+> **AT+PWM3PUS255** \
+> +PWM3PUS=255 \
 > OK
 
 [TOC](#table-of-contents)
@@ -1049,10 +1048,10 @@ PWM pulse width. 255 is 100% of width.
 PWM pulse width. 255 is 100% of width.
 
 **Example**
-> **AT+PWM4PUS**
-> +PWM4PUS=10
-> **AT+PWM4PUS255**
-> +PWM4PUS=255
+> **AT+PWM4PUS** \
+> +PWM4PUS=10 \
+> **AT+PWM4PUS255** \
+> +PWM4PUS=255 \
 > OK
 
 [TOC](#table-of-contents)
@@ -1071,10 +1070,10 @@ PWM pulse width. 255 is 100% of width.
 |   2   | Even parity bit |
 
 **Example**
-> **AT+PARITY**
-> +PARITY=0
-> **AT+PARITY0**
-> +PARITY=0
+> **AT+PARITY** \
+> +PARITY=0 \
+> **AT+PARITY0** \
+> +PARITY=0 \
 > OK
 
 [TOC](#table-of-contents)
@@ -1092,10 +1091,10 @@ PWM pulse width. 255 is 100% of width.
 |   1   | WeChat automatic test mode |
 
 **Example**
-> **AT+WXINEN**
-> +WXINEN=0
-> **AT+WXINEN1**
-> +WXINEN=1
+> **AT+WXINEN** \
+> +WXINEN=0 \
+> **AT+WXINEN1** \
+> +WXINEN=1 \
 > OK
 
 [TOC](#table-of-contents)
@@ -1113,10 +1112,10 @@ PWM pulse width. 255 is 100% of width.
 |   1   | Open the broadcast LED instructions  |
 
 **Example**
-> **AT+ALED**
-> +ALED=0
-> **AT+ALED1**
-> +ALED=1
+> **AT+ALED** \
+> +ALED=0 \
+> **AT+ALED1** \
+> +ALED=1 \
 > OK
 
 ### Settings – from module IO
@@ -1134,9 +1133,9 @@ This instruction is only applied to master and slave communication modes (master
 The AT+FUNC is sixteen hexadecimal instruction and must be sent as binary string.
 
 **Examples:**
-> **0x41542B46554E43E7F101**
-> OK
-> **0x41542B46554E43E7F100**
+> **0x41542B46554E43E7F101** \
+> OK \
+> **0x41542B46554E43E7F100** \
 > OK
 
 [TOC](#table-of-contents)
@@ -1154,9 +1153,9 @@ The AT+FUNC is sixteen hexadecimal instruction and must be sent as binary string
 |   1   | Low speed   |
 
 **Example**
-> **AT+NETIN**
-> +NETIN=1
-> **AT+NETIN0**
+> **AT+NETIN** \
+> +NETIN=1 \
+> **AT+NETIN0** \
 > +NETIN=0
 
 [TOC](#table-of-contents)
@@ -1168,9 +1167,9 @@ The AT+FUNC is sixteen hexadecimal instruction and must be sent as binary string
 | AT+CRXUUID         | +CRXUUID=\<Param> |                                      |
 
 **Example:**
-> **AT+CRXUUID**
-> +CRXUUID=FFE3
-> **AT+CRXUUIDFFE3**
+> **AT+CRXUUID** \
+> +CRXUUID=FFE3 \
+> **AT+CRXUUIDFFE3** \
 > OK
 
 [TOC](#table-of-contents)
@@ -1183,7 +1182,7 @@ The instructions are sent in hexadecimal format
 
 **Example:**
 Set the number of Wechat walk steps as: 100 thousand steps (A0 86 01), distance of 250 kilometers (FA 00 00), 5000 calories (88 13 00)
-> **AT+WXP0xA08601FA0000881300**
+> **AT+WXP0xA08601FA0000881300** \
 > OK
 
 [TOC](#table-of-contents)
@@ -1196,7 +1195,7 @@ The instructions are sent in hexadecimal format
 
 **Example:**
 Setting WeChat sport is now the 5000 steps (88 13 00)
-> **AT+WXP0x881300**
+> **AT+WXP0x881300** \
 > OK
 
 [TOC](#table-of-contents)
@@ -1215,14 +1214,14 @@ When 128 UUID len mode is selected the UUID instrucctions have to use binary str
 |   1   | 128 bit UUID |
 
 **Example:**
-> **AT+UUIDLEN**
-> +UUIDLEN=0
-> **AT+UUIDLEN1**
-> +UUIDLEN=1
-> OK
-> **AT+SVRUUID**
-> +SVRUUID=FFE0180A00001000800000805F9B34FB
-> **AT+SVRUUID0xFFE0180A00001000800000805F9B34FB**
+> **AT+UUIDLEN** \
+> +UUIDLEN=0 \
+> **AT+UUIDLEN1** \
+> +UUIDLEN=1 \
+> OK \
+> **AT+SVRUUID** \
+> +SVRUUID=FFE0180A00001000800000805F9B34FB \
+> **AT+SVRUUID0xFFE0180A00001000800000805F9B34FB** \
 > OK
 
 [TOC](#table-of-contents)
