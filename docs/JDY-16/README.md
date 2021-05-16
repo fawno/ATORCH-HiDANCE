@@ -8,6 +8,10 @@ WeChat Transparent Transmission, APP Transparent Transmission, Master-slave inte
 |   1.2   | 2017-08-19 | Release version                                                                                                       |
 |   1.4   | 2017-10-26 | WeChat sports has been added Modify the boot wake stat<br> Added 128 bit UUID support<br> Added the feature UUID:FFE3 |
 |   1.5   | 2017-11-01 | Updating IIC power consumption and 128 bit UUID problems                                                              |
+|   1.7   | 2017-12-01 | Added iBeacon probe mode AT+HOSTEN4                                                                                   |
+|   1.8   | 2017-12-20 | Added host one-key binding to connect nearby letters<br> The strongest slave BLE function                             |
+|   1.9   | 2018-04-01 | 1: Cancel AT command to modify MAC address <br> 2: The master can search other BLE slaves                             |
+[JDY-16 v1.9 (Chinese manual)](JDY-16%20v1.9)
 
 [Table of contents](#table-of-contents)
 
@@ -41,7 +45,7 @@ WeChat Transparent Transmission, APP Transparent Transmission, Master-slave inte
 	- [Settings / Queries - Broadcast name](#settings--queries---broadcast-name)
 	- [Settings / Queries - Long Broadcast name](#settings--queries---long-broadcast-name)
 	- [Settings / Queries - Broadcast name F](#settings--queries---broadcast-name-f)
-	- [Settings / Queries - MAC address (The MAC address of the module can be changed)](#settings--queries---mac-address-the-mac-address-of-the-module-can-be-changed)
+	- [Settings / Queries - MAC address](#settings--queries---mac-address)
 	- [Settings / Queries - Transmit power](#settings--queries---transmit-power)
 	- [iBeacon (iBeacon mode Instruction)](#ibeacon-ibeacon-mode-instruction)
 		- [Settings / Queries - iBeacon UUID (iBeacon mode Instruction)](#settings--queries---ibeacon-uuid-ibeacon-mode-instruction)
@@ -614,10 +618,9 @@ The longest: 18 bytes
 
 [TOC](#table-of-contents)
 
-### Settings / Queries - MAC address (The MAC address of the module can be changed)
+### Settings / Queries - MAC address
 | Instruction    | Response      | Parameter         |
 |----------------|---------------|-------------------|
-| AT+MAC\<Param> | +OK           | Param MAC address |
 | AT+MAC         | +MAC=\<Param> |                   |
 
 **Example:**
@@ -1263,10 +1266,25 @@ Default: All IO ouputs in low electrical level
 [TOC](#table-of-contents)
 
 #### 3. APP setting and reading iBeacon UUID (using feature UUID:FFE2)
+| Instruction  | Response   | Parameter                                                          |
+|--------------|------------|--------------------------------------------------------------------|
+| E111\<Param> | None       | Param: (16 bit byte)<br> Default: FDA50693A4E24FB1AFCFC6EB07647825 |
+| E112         | 12\<Param> |                                                                    |
+Example instruction: E111FDA50693A4E24FB1AFCFC6EB07647825
+Instruction:E112 reads iBeacon UUID
+Return: 12FDA50693A4E24FB1AFCFC6EB07647825
+Return instruction: 12 for command head, FDA50693A4E24FB1AFCFC6EB07647825 is UUID
 
 [TOC](#table-of-contents)
 
 #### 4. APP setting iBeacon MAJOR (using feature UUID:FFE2)
+| Instruction  | Response   | Parameter                                 |
+|--------------|------------|-------------------------------------------|
+| E321\<Param> | None       | Param: (0000H - FFFFH)<br> Default: 000AH |
+| E322         | 22\<Param> |                                           |
+Example instruction: E221000A means that Major is sixteen hexadecimal 000A
+Instruction: E222 read MAJOR value
+Return: 22000A means 22 for command head, 000A is sixteen hexadecimal Major
 
 [TOC](#table-of-contents)
 
