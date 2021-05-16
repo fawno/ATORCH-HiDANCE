@@ -11,6 +11,7 @@ WeChat Transparent Transmission, APP Transparent Transmission, Master-slave inte
 |   1.7   | 2017-12-01 | Added iBeacon probe mode AT+HOSTEN4                                                                                   |
 |   1.8   | 2017-12-20 | Added host one-key binding to connect nearby letters<br> The strongest slave BLE function                             |
 |   1.9   | 2018-04-01 | 1: Cancel AT command to modify MAC address <br> 2: The master can search other BLE slaves                             |
+
 [JDY-16 v1.9 (Chinese manual)](JDY-16%20v1.9)
 
 [Table of contents](#table-of-contents)
@@ -142,7 +143,7 @@ JDY-16 Bluetooth module can realize data transmission between module and mobile 
 | Working voltage               | 1.8V – 3.6V                                      |
 | Working temperature           | -40ºC - 80ºC                                     |
 | Antenna                       | Built in PCB antenna                             |
-| Receiving sensitivity         | -97dbm                                           |
+| Receiving sensitivity         | -97dBm                                           |
 | Transmission distance         | 60 meters                                        |
 | Module size                   | 19.6mm * 14.94mm * 2.6mm                         |
 | Bluetooth version             | BLE 4.2 (compatible with BLE4.0, BLE4.1)         |
@@ -515,7 +516,7 @@ The example opens the APP settings (broadcast name, IO, PWM) permissions
 ### Settings / Queries - Mode work pattern
 | Instruction       | Response         | Parameter                  |
 |-------------------|------------------|----------------------------|
-| AT+HOSTEN\<Param> | +OK              | Param (0-3)<br> Default: 0 |
+| AT+HOSTEN\<Param> | +OK              | Param (0-4)<br> Default: 0 |
 | AT+HOSTEN         | +HOSTEN=\<Param> |                            |
 
 **Param:**
@@ -524,6 +525,7 @@ The example opens the APP settings (broadcast name, IO, PWM) permissions
 |   0   | Slave (APP, WeChat, small program) transparent transmission |
 |   1   | Host (Master) transparent transmission mode                 |
 |   3   | Slave (iBeacon) mode                                        |
+|   4   | Slave (iBeacon probe) mode                                  |
 
 **Example:**
 > **AT+HOSTEN** \
