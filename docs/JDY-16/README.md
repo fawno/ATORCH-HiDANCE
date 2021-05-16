@@ -133,7 +133,7 @@ JDY-16 Bluetooth module can realize data transmission between module and mobile 
 |-------------------------------|--------------------------------------------------|
 | Model                         | JDY-16                                           |
 | Working frequency band        | 2.4G                                             |
-| Transmit power                | 0db (Max)                                        |
+| Transmit power                | 0dB (Max)                                        |
 | Communication interface       | UART or IIC                                      |
 | Working voltage               | 1.8V – 3.6V                                      |
 | Working temperature           | -40ºC - 80ºC                                     |
@@ -144,8 +144,8 @@ JDY-16 Bluetooth module can realize data transmission between module and mobile 
 | Bluetooth version             | BLE 4.2 (compatible with BLE4.0, BLE4.1)         |
 | Transparent transmission rate | 115200 bps/s                                     |
 | Wake-up status current        | 4mA (Broadcast)                                  |
-| Light sleep status current    | <300uA (Broadcast)                               |
-| Deep sleep status current     | 1.8uA (No broadcast)                             |
+| Light sleep status current    | <300μA (Broadcast)                               |
+| Deep sleep status current     | 1.8μA (No broadcast)                             |
 | Instruction parameter saving  | Parameter configuration power down data is saved |
 | STM welding temperature       | < 300ºC                                          |
 
@@ -155,19 +155,19 @@ JDY-16 Bluetooth module can realize data transmission between module and mobile 
 | Working mode                | Broadcast state           | Current | Remarks   |
 |-----------------------------|---------------------------|---------|-----------|
 | Wake up                     | Broadcast                 |     4mA | Remark #1 |
-| Deep no broadcast sleep     | No broadcast              |  1.38uA | Remark #1 |
-| Light sleep broadcast sleep |  100ms broadcast interval |   280uA | Remark #1 |
-| Average power consumption   |  200ms broadcast interval |   140uA | Remark #1 |
-| Average power consumption   |  300ms broadcast interval |    80uA | Remark #1 |
-| Average power consumption   |  400ms broadcast interval | << 80uA | Remark #1 |
-| Average power consumption   |  500ms broadcast interval | << 80uA | Remark #1 |
-| Average power consumption   |  600ms broadcast interval | << 80uA | Remark #1 |
-| Average power consumption   |  700ms broadcast interval | << 80uA | Remark #1 |
-| Average power consumption   |  800ms broadcast interval | << 80uA | Remark #1 |
-| Average power consumption   |  900ms broadcast interval | << 80uA | Remark #1 |
-| Average power consumption   | 1000ms broadcast interval | << 80uA | Remark #1 |
+| Deep no broadcast sleep     | No broadcast              |  1.38μA | Remark #1 |
+| Light sleep broadcast sleep |  100ms broadcast interval |   280μA | Remark #1 |
+| Average power consumption   |  200ms broadcast interval |   140μA | Remark #1 |
+| Average power consumption   |  300ms broadcast interval |    80μA | Remark #1 |
+| Average power consumption   |  400ms broadcast interval | ≪ 80μA | Remark #1 |
+| Average power consumption   |  500ms broadcast interval | ≪ 80μA | Remark #1 |
+| Average power consumption   |  600ms broadcast interval | ≪ 80μA | Remark #1 |
+| Average power consumption   |  700ms broadcast interval | ≪ 80μA | Remark #1 |
+| Average power consumption   |  800ms broadcast interval | ≪ 80μA | Remark #1 |
+| Average power consumption   |  900ms broadcast interval | ≪ 80μA | Remark #1 |
+| Average power consumption   | 1000ms broadcast interval | ≪ 80μA | Remark #1 |
 | Wake up state               | Connected                 |     4mA | Remark #2 |
-| Sleep state                 | Connected                 |    50uA | Remark #2 |
+| Sleep state                 | Connected                 |    50μA | Remark #2 |
 
 **Remarks**
 1. Generally communicate with APP connection, it suggests broadcast should not be set too long, which will affect the connection time. It is generally recommended between 100 to 500ms, and if you need to connect fast and no power requirements, broadcast intervals can be set to the shortest.
@@ -635,8 +635,8 @@ The longest: 18 bytes
 **Param:**
 | Value | Description |
 |-------|------------:|
-|   0   |     -16db   |
-|   1   |       0db   |
+|   0   |     -16dB   |
+|   1   |       0dB   |
 
 **Example:**
 > **AT+POWR** \

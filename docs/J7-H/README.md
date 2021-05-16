@@ -7,7 +7,7 @@ Measurement Ranges (and resolution accuracy):
 - Capacity accumulation: 0 - 99999 mAh (0.001 Ah)
 - Power accumulation: 0 - 9999.99 Wh (0.01 Wh)
 - Power calculation: 0.00 - 160.00 W (0.01 W)
-- Impedance: 0.0 - 6000.0 $\Omega$ (0.1 $\Omega$)
+- Impedance: 0.0 - 6000.0 Ω (0.1 Ω)
 - Temperature: 0 - 100 ºC (1 ºC)
 - Timing time: 999:59:59 (1 s)
 - USB D+ voltage: 0 - 3.30 V (0.01 V)
