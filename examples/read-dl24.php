@@ -1,9 +1,9 @@
 <?php
 	require __DIR__ . '/autoload.php';
 
-	use Fawno\HiDANCE\J7H;
+	use Fawno\HiDANCE\DL24;
 
-	$jdy = new J7H('COM8');
+	$jdy = new DL24('COM8');
 	echo $jdy->sendAT();
 
 	$filename = strftime('data/jdy-%Y%m%d-%H%M.raw');
@@ -21,4 +21,3 @@
 			echo $data;
 		}
 	} while (!$jdy->isDisconnectedSignal($data));
-

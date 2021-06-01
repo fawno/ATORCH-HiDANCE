@@ -7,7 +7,7 @@
 	 * @package Fawno\HiDANCE
 	 *
 	*/
-	class J7H extends HiDANCE {
+	class DL24 extends HiDANCE {
 		protected const RST_ELECTRIC = '\xFF\x55\x11\x03\x01\x00\x00\x00\x00\x51';
 		protected const RST_CAPACITY = '\xFF\x55\x11\x03\x02\x00\x00\x00\x00\x52';
 		protected const RST_TIME     = '\xFF\x55\x11\x03\x03\x00\x00\x00\x00\x53';
@@ -20,77 +20,53 @@
 		public const FIELDS_UNPACK = [
 			'Mark' => 'H8',
 			'Reserved1' => 'H2',
-			'V+' => 'n1',
-			'V-' => 'C1',
-			'I' => 'n1',
+			'V' => 'n1',
 			'Reserved2' => 'H2',
+			'I' => 'n1',
+			'Reserved3' => 'H2',
 			'Capacity' => 'n1',
 			'Energy' => 'N1',
-			'D-' => 'n1',
-			'D+' => 'n1',
+			'Reserved4' => 'H14',
 			'Temp' => 'n1',
 			'Hours' => 'n1',
 			'Minuts' => 'C1',
 			'Seconds' => 'C1',
 			'BL' => 'C1',
-			'V>' => 'n1',
-			'V<' => 'n1',
-			'I>' => 'n1',
-			'PF' => 'C1',
-			'Reserved3' => 'H2',
+			'Reserved5' => 'H10',
 		];
 
 		public const FIELDS_SCALE = [
-			'V+'       => 1/100,	// cV / 100  => V
-			'V-'       => 1/100,	// cV / 100  => V
-			'I'        => 1/100,	// cA / 100  => A
-			'Capacity' => 1,	    // mAh / 1   => mAh
-			'Energy'   => 1/100,	// cWh / 100 => Wh
-			'D-'       => 1/100,	// cV / 100  => V
-			'D+'       => 1/100,	// cV / 100  => V
-			'Temp'     => 1,	    // ºC / 1    => ºC
-			'BL'       => 1,      // s / 1     => s
-			'V>'       => 1/100,  // cV / 100  => V
-			'V<'       => 1/100,  // cV / 100  => V
-			'I>'       => 1/100,  // cA / 100  => A
-			'PF'       => 1/100,  // 100 => 1.00 Power Factor
+			'V'        => 1/10,	  // dV / 10    => V
+			'I'        => 1/1000,	// mA / 1000  => A
+			'Capacity' => 1/100,  // cAh / 100  => Ah
+			'Energy'   => 1/100,	// ckWh / 100 => kWh
+			'Temp'     => 1,	    // ºC / 1     => ºC
+			'BL'       => 1,      // s / 1      => s
 		];
 
 		public const FIELDS_FORMAT = [
-			'V+'       => '% 5.2f',
-			'V-'       => '% 5.2f',
-			'I'        => '% 5.2f',
-			'Capacity' => '% 5u',
+			'V'        => '% 5.1f',
+			'I'        => '% 5.3f',
+			'Capacity' => '% 5.2f',
 			'Energy'   => '% 7.2f',
-			'D-'       => '% 5.2f',
-			'D+'       => '% 5.2f',
 			'Temp'     => '% 2u',
 			'BL'       => '% 2u',
-			'V>'       => '% 5.2f',
-			'V<'       => '% 5.2f',
-			'I>'       => '% 5.2f',
-			'PF'       => '%03.2f',
 		];
 
 		public const FIELDS_UNITS = [
 			'Time'      => null,
 			'Mark'      => null,
 			'Reserved1' => null,
-			'V+'        => 'V',
-			'V-'        => 'V',
-			'I'         => 'A',
+			'V'         => 'V',
 			'Reserved2' => null,
-			'Capacity'  => 'mAh',
-			'Energy'    => 'Wh',
-			'D-'        => 'V',
-			'D+'        => 'V',
+			'I'         => 'A',
+			'Reserved3' => null,
+			'Capacity'  => 'Ah',
+			'Energy'    => 'kWh',
+			'Reserved4' => null,
 			'Temp'      => 'ºC',
 			'BL'        => 's',
-			'V>'        => 'V',
-			'V<'        => 'V',
-			'I>'        => 'A',
-			'PF'        => null,
-			'Reserved3' => null,
+			'Reserved5' => null,
 		];
 
 		/**
@@ -149,7 +125,7 @@
 			$output = null;
 
 			if ($header) {
-				//$output .= implode($separator, array_keys(self::FIELDS_UNITS)) . PHP_EOL;
+				//$output .= implode($separator, array_keys(self::DL24_FIELDS_UNITS)) . PHP_EOL;
 				$header = [];
 				foreach (self::FIELDS_UNITS as $field => $unit) {
 					$header[] = $unit ? sprintf('%s (%s)', $field, $unit) : $field;
@@ -179,7 +155,7 @@
 			$rows = [];
 
 			if ($header) {
-				//$rows[] = array_keys(self::FIELDS_UNITS);
+				//$rows[] = array_keys(self::DL24_FIELDS_UNITS);
 				$header = [];
 				foreach (self::FIELDS_UNITS as $field => $unit) {
 					$header[] = $unit ? sprintf('%s (%s)', $field, $unit) : $field;
