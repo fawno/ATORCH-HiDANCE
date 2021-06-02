@@ -1,6 +1,7 @@
 # Documentation
 - [HiDANCE Devices](#hidance-devices)
 	- [HiDANCE J7-H USB Energy Meter](#hidance-j7-h-usb-energy-meter)
+	- [HiDANCE DL24/DL24P Electronic Load](#hidance-dl24dl24p-electronic-load)
 - [Bluetooth modules](#bluetooth-modules)
 	- [JDY-16 High Speed Transparent Transmission Bluetooth Module](#jdy-16-high-speed-transparent-transmission-bluetooth-module)
 	- [JDY-19 Ultra-low Power Consumption Bluetooth 4.2 BLE Module](#jdy-19-ultra-low-power-consumption-bluetooth-42-ble-module)
@@ -9,6 +10,9 @@
 
 ### HiDANCE J7-H USB Energy Meter
 - [J7-H User Manual](J7-H)
+
+### HiDANCE DL24/DL24P Electronic Load
+- [DL24/DL24P User Manual](DL24-DL24P)
 
 ## Bluetooth modules
 
