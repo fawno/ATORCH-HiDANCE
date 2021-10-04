@@ -117,9 +117,11 @@ Warning: If the bluetooth device model corresponding to J cannot be found in the
 [TOC](#table-of-contents)
 
 ## Software download address:
+[E-test](../E-test)
+
 1. User manual, PC software installation instruction and PC software and Android APP [download link](http://www.mediafire.com/folder/m09i9bjv8703d/DL24-DL24P)
-2. IOS APP: search E_test on iphone APP store to download
-3. Android APP: search E-test at Google play to down load
+2. [iOS App](https://apps.apple.com/app/e-test/id1478623332): search E_test on iphone APP store to download
+3. [Android App](https://play.google.com/store/apps/details?id=com.tang.etest.e_test): search E-test at Google play to down load
 
 ## SDK
 

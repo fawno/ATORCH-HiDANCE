@@ -1,4 +1,16 @@
 # HiDANCE J7-H USB Energy Meter
+![J7-H](img/J7-H.png)
+
+# Table of contents
+- [Production Description](#production-description)
+- [Product Details:](#product-details)
+- [KEY Button Description](#key-button-description)
+- [Software download address](#software-download-address)
+- [SDK](#sdk)
+			- [Record structure:](#record-structure)
+			- [Commands](#commands)
+			- [Data formats](#data-formats)
+- [Images](#images)
 
 ## Production Description
 Measurement Ranges (and resolution accuracy):
