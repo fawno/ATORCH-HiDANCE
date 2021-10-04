@@ -9,9 +9,9 @@ E-test is an APP that can view the running status of the electric energy meter i
 - [Screenshot](#screenshot)
 
 ## Links
-[Android official link](https://play.google.com/store/apps/details?id=com.tang.etest.e_test)
-[iOS official link](https://apps.apple.com/app/e-test/id1478623332)
-[Android and PC software](http://www.mediafire.com/folder/31bc15uhq8odb/E-meter)
+- [Android official link](https://play.google.com/store/apps/details?id=com.tang.etest.e_test)
+- [iOS official link](https://apps.apple.com/app/e-test/id1478623332)
+- [Android and PC software](http://www.mediafire.com/folder/31bc15uhq8odb/E-meter)
 
 ## Setup bluetooth
 ![Bluetooth](img/Bluetooth.jpg)
