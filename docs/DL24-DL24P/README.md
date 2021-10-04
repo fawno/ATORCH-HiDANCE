@@ -123,6 +123,8 @@ Warning: If the bluetooth device model corresponding to J cannot be found in the
 2. [iOS App](https://apps.apple.com/app/e-test/id1478623332): search E_test on iphone APP store to download
 3. [Android App](https://play.google.com/store/apps/details?id=com.tang.etest.e_test): search E-test at Google play to down load
 
+[TOC](#table-of-contents)
+
 ## SDK
 
 ##### Record structure:

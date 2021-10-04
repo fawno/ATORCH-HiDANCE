@@ -25,6 +25,8 @@ Measurement Ranges (and resolution accuracy):
 - USB D+ voltage: 0 - 3.30 V (0.01 V)
 - USB D- voltage: 0 - 3.30 V (0.01 V)
 
+[TOC](#table-of-contents)
+
 ## Product Details:
 - Input Interface:  USB
 - Output interface:  USB
@@ -40,6 +42,8 @@ Measurement Ranges (and resolution accuracy):
 - Working humidity: 10 to 80 (no doubt)
 - Work oppression: 80 - 106 Kpa
 
+[TOC](#table-of-contents)
+
 ## KEY Button Description
 1. Long press the key button to flip the screen (180 degree flip)
 2. Double-click the capacity(Ah) to clear zero.
@@ -49,11 +53,15 @@ Measurement Ranges (and resolution accuracy):
 
 Switch between different display interfaces by clicking the button
 
+[TOC](#table-of-contents)
+
 ## Software download address
 [E-test](../E-test)
 
+- [iOS Official App](https://apps.apple.com/app/e-test/id1478623332): search E_test on iPhone App Store
+- [Android Official App](https://play.google.com/store/apps/details?id=com.tang.etest.e_test): search E-test at Google Play
 
-Supports [Android](https://play.google.com/store/apps/details?id=com.tang.etest.e_test) phones and [iOS](https://apps.apple.com/app/e-test/id1478623332) phones
+[TOC](#table-of-contents)
 
 ## SDK
 
@@ -82,6 +90,8 @@ Supports [Android](https://play.google.com/store/apps/details?id=com.tang.etest.
 | 0022h  | Power Factor            | 1/100      | unsigned char  |        |
 | 0023h  | reserved                |            | char           |        |
 
+[TOC](#table-of-contents)
+
 ##### Commands
 | Command        | Send                          | Receive                 |
 |----------------|-------------------------------|-------------------------|
@@ -95,6 +105,8 @@ Supports [Android](https://play.google.com/store/apps/details?id=com.tang.etest.
 | -              | FF 55 11 03 34 00 00 00 00 0C | FF 55 02 03 01 00 00 42 |
 
 
+[TOC](#table-of-contents)
+
 ##### Data formats
 
 | Data format | Lenght  | Byte order |
@@ -103,11 +115,18 @@ Supports [Android](https://play.google.com/store/apps/details?id=com.tang.etest.
 | word        | 16 bits | Big endian |
 | dword       | 32 bits | Big endian |
 
-## Images
+[TOC](#table-of-contents)
 
-![](img/001.jpg)
-![](img/002.jpg)
-![](img/003.jpg)
-![](img/004.jpg)
-![](img/005.jpg)
-![](img/006.jpg)
+## Images
+![001](img/001.jpg)
+[TOC](#table-of-contents)
+![002](img/002.jpg)
+[TOC](#table-of-contents)
+![003](img/003.jpg)
+[TOC](#table-of-contents)
+![004](img/004.jpg)
+[TOC](#table-of-contents)
+![005](img/005.jpg)
+[TOC](#table-of-contents)
+![006](img/006.jpg)
+[TOC](#table-of-contents)
