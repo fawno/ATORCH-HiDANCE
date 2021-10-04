@@ -39,8 +39,7 @@ Switch between different display interfaces by clicking the button
 
 ## Software download address
 [E-test](../E-test)
-[E-meter](http://www.mediafire.com/folder/31bc15uhq8odb/E-meter)
-[![](../E-test/E-test-icon.png)](http://www.mediafire.com/folder/31bc15uhq8odb/E-meter)
+
 
 Supports [Android](https://play.google.com/store/apps/details?id=com.tang.etest.e_test) phones and [iOS](https://apps.apple.com/app/e-test/id1478623332) phones
 
