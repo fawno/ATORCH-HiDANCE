@@ -121,18 +121,23 @@ Switch between different display interfaces by clicking the button
 ![001](img/001.jpg)
 
 [TOC](#table-of-contents)
+
 ![002](img/002.jpg)
 
 [TOC](#table-of-contents)
+
 ![003](img/003.jpg)
 
 [TOC](#table-of-contents)
+
 ![004](img/004.jpg)
 
 [TOC](#table-of-contents)
+
 ![005](img/005.jpg)
 
 [TOC](#table-of-contents)
+
 ![006](img/006.jpg)
 
 [TOC](#table-of-contents)
