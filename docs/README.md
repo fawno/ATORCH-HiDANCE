@@ -23,7 +23,7 @@
   - [JDY-16 v1.5 (English manual)](JDY-16/JDY-16%20v1.5%20(English%20manual).pdf)
   - [JDY-16 v1.9 (Chinese manual)](JDY-16/JDY-16%20v1.9)
   - [JDY-16 Master/Slave Transparente configuration](JDY-16/JDY-16%20Master%20Slave%20Transparent%20Transmission%20Configuration.pdf)
-  - [JDY-16 UUID Configuration](JDY-16/JDY-16%20UUID%20Configuration.pdf)
+  - [JDY-16 UUID Configuration](JDY-16/JDY-16%20UUID%20Configuration)
 
 ### JDY-19 Ultra-low Power Consumption Bluetooth 4.2 BLE Module
 - PDF:
