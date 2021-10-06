@@ -4,7 +4,7 @@
 
 ## JDY-16 High Speed Transparent Transmission Bluetooth Module
 - [JDY-16 Manual](JDY-16)
-- [JDY-16 UUID Configuration](DY-16/JDY-16%20UUID%20Configuration) ([PDF](JDY-16/JDY-16%20UUID%20Configuration/JDY-16%20UUID%20Configuration.pdf))
+- [JDY-16 UUID Configuration](JDY-16/JDY-16%20UUID%20Configuration) ([PDF](JDY-16/JDY-16%20UUID%20Configuration/JDY-16%20UUID%20Configuration.pdf))
 - PDF:
   - [JDY-16 v1.2 (English manual)](JDY-16/JDY-16%20v1.2%20(English%20manual).pdf)
   - [JDY-16 v1.5 (English manual)](JDY-16/JDY-16%20v1.5%20(English%20manual).pdf)
