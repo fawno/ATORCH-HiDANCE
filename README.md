@@ -7,6 +7,6 @@
 [![GitHub stars](https://img.shields.io/github/stars/fawno/HiDANCE)](https://github.com/fawno/HiDANCE/stargazers)
 [![Documentation](https://img.shields.io/badge/documentation-blue)](docs)
 
-# HiDANCE E-meters interface in PHP
+# ATORCH-HiDANCE E-meters interface in PHP
 
-Simple interface in PHP to interact with HiDANCE E-meters
+Simple interface in PHP to interact with ATORCH-HiDANCE E-meters
