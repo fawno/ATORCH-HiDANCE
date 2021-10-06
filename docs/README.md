@@ -7,6 +7,7 @@
 	- [JDY-19 Ultra-low Power Consumption Bluetooth 4.2 BLE Module](#jdy-19-ultra-low-power-consumption-bluetooth-42-ble-module)
 
 ## [ATORCH-HiDANCE Devices](devices)
+- [ATORCH-HiDANCE Devices Protocol](devices/ATORCH-HiDANCE%20Devices%20Protocol.md)
 
 ### ATORCH-HiDANCE J7-H USB Energy Meter
 - [J7-H User Manual](devices/J7-H)
