@@ -25,7 +25,7 @@ Device broadcast name: `UD18-SPP`, `AT24-SPP`, etc `*-SPP`
 | ------------------- |
 | Serial Port Profile |
 
-[TOC](#table-of-contents)
+[TOC](#atorch-hidance-devices-protocol)
 
 ### Bluetootch LE
 Device broadcast name: `UD18-BLE`, `AT24-BLE`, etc `*-BLE`
@@ -35,7 +35,7 @@ Device broadcast name: `UD18-BLE`, `AT24-BLE`, etc `*-BLE`
 | Service        | `0000FFE0-0000-1000-8000-00805F9B34FB` |
 | Characteristic | `0000FFE1-0000-1000-8000-00805F9B34FB` |
 
-[TOC](#table-of-contents)
+[TOC](#atorch-hidance-devices-protocol)
 
 ## Packet layout
 |    Offset | Field        | Block size | Note                                      |
@@ -48,7 +48,7 @@ Device broadcast name: `UD18-BLE`, `AT24-BLE`, etc `*-BLE`
 
 > The *Message* consists of *Message Type*, *Device Type* and *Payload*.
 
-[TOC](#table-of-contents)
+[TOC](#atorch-hidance-devices-protocol)
 
 ### Message Type
 | Type | Payload size | Note                |
@@ -57,7 +57,7 @@ Device broadcast name: `UD18-BLE`, `AT24-BLE`, etc `*-BLE`
 | `02` |       4 byte | [Reply](#reply)     |
 | `11` |       6 byte | [Command](#command) |
 
-[TOC](#table-of-contents)
+[TOC](#atorch-hidance-devices-protocol)
 
 ### Device Type
 | Type | Note                                  |
@@ -66,21 +66,21 @@ Device broadcast name: `UD18-BLE`, `AT24-BLE`, etc `*-BLE`
 | `02` | [DC Meter Report](#dc-meter-report)   |
 | `03` | [USB Meter Report](#usb-meter-report) |
 
-[TOC](#table-of-contents)
+[TOC](#atorch-hidance-devices-protocol)
 
 ### Payloads
  - [Reports](#reports)
  - [Reply](#reply)
  - [Command](#command)
 
-[TOC](#table-of-contents)
+[TOC](#atorch-hidance-devices-protocol)
 
 #### Reports
   - [AC Meter Report](#ac-meter-report)
   - [DC Meter Report](#dc-meter-report)
   - [USB Meter Report](#usb-meter-report)
 
-[TOC](#table-of-contents)
+[TOC](#atorch-hidance-devices-protocol)
 
 ##### AC Meter Report
 > There are currently no product tests
@@ -101,7 +101,7 @@ Device broadcast name: `UD18-BLE`, `AT24-BLE`, etc `*-BLE`
 |  001Ah |    1 | Back Light (BL)         | 1 s         | unsigned char      |  Yes   |
 |  001Bh |    4 | Unknown value           |             |                    |        |
 
-[TOC](#table-of-contents)
+[TOC](#atorch-hidance-devices-protocol)
 
 ##### DC Meter Report
 > Based on [DL24P Electronic Load](DL24-DL24P) tests
@@ -121,7 +121,7 @@ Device broadcast name: `UD18-BLE`, `AT24-BLE`, etc `*-BLE`
 |  001Ah |    1 | Back Light (BL)         | 1 s         | unsigned char      |  Yes   |
 |  001Bh |    4 | Unknown value           |             |                    |        |
 
-[TOC](#table-of-contents)
+[TOC](#atorch-hidance-devices-protocol)
 
 ##### USB Meter Report
 > Based on [J7-H USB Tester](J7-H) tests
@@ -144,7 +144,7 @@ Device broadcast name: `UD18-BLE`, `AT24-BLE`, etc `*-BLE`
 |  001Ch |    2 | Overcurrent alarm (I>)  | 1/100 A     | 16 bit unsigned BE |  Yes   |
 |  001Eh |    1 | Power Factor            | 1/100       | unsigned char      |        |
 
-[TOC](#table-of-contents)
+[TOC](#atorch-hidance-devices-protocol)
 
 #### Command
 | Offset | Field       | Size | Data format           |
@@ -168,7 +168,7 @@ Device broadcast name: `UD18-BLE`, `AT24-BLE`, etc `*-BLE`
 |    `33` | `[+]` Command (USB Meter) | `00000000`  |
 |    `34` | `[+]` Command (USB Meter) | `00000000`  |
 
-[TOC](#table-of-contents)
+[TOC](#atorch-hidance-devices-protocol)
 
 #### Reply
 | Offset | Field   | Size | Data format                     |
@@ -176,7 +176,7 @@ Device broadcast name: `UD18-BLE`, `AT24-BLE`, etc `*-BLE`
 |   `00` | State   |    1 | `01`: OK <br> `03`: Unsupported |
 |   `01` | Unknown |    2 | `0000`                          |
 
-[TOC](#table-of-contents)
+[TOC](#atorch-hidance-devices-protocol)
 
 ### Checksum Algorithm
 1. [Message](#packet-layout):
@@ -229,7 +229,7 @@ Function in PHP:
   //FF 55 11 03 05 00 00 00 00 5D
 ```
 
-[TOC](#table-of-contents)
+[TOC](#atorch-hidance-devices-protocol)
 
 ## Thanks
 
