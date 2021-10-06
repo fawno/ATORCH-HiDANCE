@@ -56,7 +56,7 @@ Switch between different display interfaces by clicking the button
 [TOC](#table-of-contents)
 
 ## Software download address
-[E-test](../E-test)
+[E-test](../../software/E-test)
 
 - [iOS Official App](https://apps.apple.com/app/e-test/id1478623332): search E_test on iPhone App Store
 - [Android Official App](https://play.google.com/store/apps/details?id=com.tang.etest.e_test): search E-test at Google Play
