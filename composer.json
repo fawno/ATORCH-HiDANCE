@@ -1,17 +1,17 @@
 {
-	"name": "fawno/hidance",
-  "version": "0.0.2",
-	"description": "HiDANCE E-meters PHP interface",
+	"name": "fawno/atorch-hidance",
+  "version": "0.0.3",
+	"description": "ATORCH-HiDANCE E-meters PHP interface",
   "license": "MIT",
   "authors": [
     {
       "name": "Fawno",
-      "homepage": "https://github.com/fawno/HiDANCE/graphs/contributors"
+      "homepage": "https://github.com/fawno/ATORCH-HiDANCE/graphs/contributors"
     }
   ],
   "support": {
-    "issues": "https://github.com/fawno/HiDANCE/issues",
-    "source": "https://github.com/fawno/HiDANCE"
+    "issues": "https://github.com/fawno/ATORCH-HiDANCE/issues",
+    "source": "https://github.com/fawno/ATORCH-HiDANCE"
   },
 	"minimum-stability": "dev",
 	"require": {
@@ -20,7 +20,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Fawno\\HiDANCE\\": "src"
+      "Fawno\\ATORCH-HiDANCE\\": "src"
     }
 	}
 }
