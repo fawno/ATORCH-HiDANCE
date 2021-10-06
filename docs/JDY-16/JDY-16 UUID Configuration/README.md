@@ -24,7 +24,7 @@ The AT instructions needed to configure the above 128 bit UUID are as follows:
 	41 54 2B 43 52 58 55 55 49 44 00 00 ff 01 00 00 10 00 80 00 00 80 5f 9b 34 fb 0d 0a
 5. AT+RST reset mode, Android mobile phone does not need to reopen Bluetooth, and IOS mobile phone needs to reopen Bluetooth.
 
-Using the Lightblue search, the UUID of the Bluetooth module has been changed, which requires UUID.
+Using the [Lightblue search](https://play.google.com/store/apps/details?id=com.punchthrough.lightblueexplorer), the UUID of the Bluetooth module has been changed, which requires UUID.
 
 ![](img/001.jpg)
 
@@ -43,7 +43,7 @@ AT+RST // reset mode
 ```
 Android mobile phone does not need to reopen Bluetooth, and IOS mobile phone needs to reopen Bluetooth.
 
-Using the Lightblue search, the UUID of the Bluetooth module has been changed, which requires UUID.
+Using the [Lightblue search](https://play.google.com/store/apps/details?id=com.punchthrough.lightblueexplorer), the UUID of the Bluetooth module has been changed, which requires UUID.
 
 ![](img/002.jpg)
 
@@ -58,4 +58,4 @@ AT+RST // reset mode
 ```
 Android mobile phone does not need to reopen Bluetooth, and IOS mobile phone needs to reopen Bluetooth.
 
-Using the Lightblue search, the UUID of the Bluetooth module has been changed, which requires UUID.
+Using the [Lightblue search](https://play.google.com/store/apps/details?id=com.punchthrough.lightblueexplorer), the UUID of the Bluetooth module has been changed, which requires UUID.
