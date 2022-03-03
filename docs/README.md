@@ -2,6 +2,7 @@
 - [ATORCH-HiDANCE Devices](#atorch-hidance-devices)
 	- [ATORCH-HiDANCE J7-H USB Energy Meter](#atorch-hidance-j7-h-usb-energy-meter)
 	- [ATORCH-HiDANCE DL24/DL24P Electronic Load](#atorch-hidance-dl24dl24p-electronic-load)
+	- [ATORCH-HiDANCE DT24/DT24P DC Power Supply Voltmeter Ammeter](#atorch-hidance-dt24dt24p-dc-power-supply-voltmeter-ammeter)
 - [Bluetooth modules](#bluetooth-modules)
 	- [JDY-16 High Speed Transparent Transmission Bluetooth Module](#jdy-16-high-speed-transparent-transmission-bluetooth-module)
 	- [JDY-19 Ultra-low Power Consumption Bluetooth 4.2 BLE Module](#jdy-19-ultra-low-power-consumption-bluetooth-42-ble-module)
@@ -14,6 +15,10 @@
 
 ### ATORCH-HiDANCE DL24/DL24P Electronic Load
 - [DL24/DL24P User Manual](devices/DL24-DL24P)
+
+### ATORCH-HiDANCE DT24/DT24P DC Power Supply Voltmeter Ammeter
+- [DT24 User Manual](DT24-DT24P/DT24.md)
+- [DT24P User Manual](DT24-DT24P/DT24P.md)
 
 ## [Bluetooth modules](modules)
 
