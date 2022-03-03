@@ -109,6 +109,7 @@ The display screens of different shunts of this product are the same, as shown i
 This product adopts the high-end and cost-intensive "2.4-inch high-definition large color Chinese and English display screen", designed a variety of functional interface content, Various parameters are displayed on one screen, and different function interfaces can be switched by short pressing the button. The interface diagram and introduction are as follows
 
 1. Connect independent power supply (5-24V), the startup screen will appear
+
    ![](img/004.png)
 
    1. After powering on, short press the "+"/"-" key to switch between the following function interface and battery percentage interface.
@@ -116,6 +117,7 @@ This product adopts the high-end and cost-intensive "2.4-inch high-definition la
 [TOC](#table-of-contents)
 
 2. Function interface:
+
    ![](img/005.png)
 
    1. Short press the "M" key to check the unit price of electricity.
@@ -127,6 +129,7 @@ This product adopts the high-end and cost-intensive "2.4-inch high-definition la
 [TOC](#table-of-contents)
 
 3. Percentage interface:
+
    ![](img/006.png)
 
    More than 30% shows green, less than 30% shows yellow, less than 10% shows red (as on the rightPicture) After setting, you can judge whether the battery is.
@@ -142,6 +145,7 @@ This product adopts the high-end and cost-intensive "2.4-inch high-definition la
 [TOC](#table-of-contents)
 
 4. Low-voltage alarm reminder interface:
+
    ![](img/008.png)
 
    Set a low percentage value (such as 306V), the product detects that the test voltage is lower than the setting When the value is low, this alarm reminder interface will appear.
@@ -153,6 +157,7 @@ This product adopts the high-end and cost-intensive "2.4-inch high-definition la
 [TOC](#table-of-contents)
 
 5. High pressure alarm reminder interface:
+
    ![](img/009.png)
 
 	 When a high percentage value (such as 296V) is set, the product detects that the test voltage exceeds the set value.
@@ -166,6 +171,7 @@ This product adopts the high-end and cost-intensive "2.4-inch high-definition la
 [TOC](#table-of-contents)
 
 6. Over-power alarm reminder interface:
+
    ![](img/010.png)
 
    When the power threshold is set (such as 998.96W), the product detects that the test power exceeds
@@ -179,6 +185,7 @@ This product adopts the high-end and cost-intensive "2.4-inch high-definition la
 [TOC](#table-of-contents)
 
 7. System background interface:
+
    ![](img/011.png)
 
    Long press the "M" key to enter the background setting, M key: switch up and down, +/- key: plus and minus adjustment or the OK button. For detailed functions and settings, please see the following: System background and functions set up
