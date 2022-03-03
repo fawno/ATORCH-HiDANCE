@@ -1,7 +1,10 @@
 # DT24P Series User Manual
 (30A/100A/200A/300A/400A/500A/600A/1000A)
+
 2.4-inch HD color screen Bluetooth digital transmission curve version battery capacity / DC power multi-function tester
+
 ![](img/001.png)
+
 (This product will be updated at any time, please pay attention to the web page description for detailed update details)
 
 [DT24P User Manual (pdf)](DT24-DT24P/DT24P%20User%20manual.pdf)
