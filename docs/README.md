@@ -17,8 +17,8 @@
 - [DL24/DL24P User Manual](devices/DL24-DL24P)
 
 ### ATORCH-HiDANCE DT24/DT24P DC Power Supply Voltmeter Ammeter
-- [DT24 User Manual](DT24-DT24P/DT24.md)
-- [DT24P User Manual](DT24-DT24P/DT24P.md)
+- [DT24 User Manual](devices/DT24-DT24P/DT24.md)
+- [DT24P User Manual](devices/DT24-DT24P/DT24P.md)
 
 ## [Bluetooth modules](modules)
 
