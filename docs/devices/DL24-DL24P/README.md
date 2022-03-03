@@ -9,6 +9,7 @@ DL24 Color Screen Bluetooth Data Transmission Digital control Curve Load Meter
 		- [2 Wire version](#2-wire-version)
 		- [4 Wire DIY version](#4-wire-diy-version)
 			- [DIY 1000W](#diy-1000w)
+			- [Schematic diagram and PCB layout](#schematic-diagram-and-pcb-layout)
 	- [Fast application method of constant current (CC) discharge mode](#fast-application-method-of-constant-current-cc-discharge-mode)
 	- [Application methods of constant resistance (CR), constant power (CP) and costant voltage (CV)](#application-methods-of-constant-resistance-cr-constant-power-cp-and-costant-voltage-cv)
 	- [Methods and techniques for the inspecting and measuring of battery capacity and electric quantify](#methods-and-techniques-for-the-inspecting-and-measuring-of-battery-capacity-and-electric-quantify)
@@ -65,6 +66,17 @@ If you need DIY 1000W, you need to meet 3 conditions
 1. Need to add IRFP260N (150W) discharge tube
 2. Need to add a powerful radiator (support 1000W)
 3. Need strong modification ability!
+
+[TOC](#table-of-contents)
+
+##### Schematic diagram and PCB layout
+[DL24 PCB layout](DL24%20PCB%20layout.pdf)
+[![](DL24%20PCB%20layout.svg)](DL24%20PCB%20layout.pdf)
+
+[TOC](#table-of-contents)
+
+[DL24P Schematic diagram](DL24P%20Schematic%20diagram.pdf)
+[![](DL24P%20Schematic%20diagram.svg)](DL24P%20Schematic%20diagram.pdf)
 
 [TOC](#table-of-contents)
 
