@@ -41,4 +41,4 @@
 - PDF:
   - [JDY-34 v1.2 (English manual)](modules/JDY-34/JDY-34%20v1.2%20(English%20manual).pdf)
   - [JDY-34 v1.2 (Chinese manual)](modules/JDY-34/JDY-34%20v1.2%20(Chinese%20manual).pdf)
-  - [JDY-34 Common application configuration instructions (Chinese)](JDY-34/Common%20application%20configuration%20instructions.pdf)
+  - [JDY-34 Common application configuration instructions (Chinese)](modules/JDY-34/Common%20application%20configuration%20instructions.pdf)
