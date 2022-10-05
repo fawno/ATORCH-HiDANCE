@@ -3,7 +3,7 @@
 
 	use Fawno\HiDANCE\DL24;
 
-	$jdy = new DL24('COM8');
+	$jdy = new DL24('COM4');
 	echo $jdy->sendAT();
 
 	$filename = strftime('data/jdy-%Y%m%d-%H%M.raw');

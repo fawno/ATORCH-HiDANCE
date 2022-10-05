@@ -1,7 +1,7 @@
 <?php
 	namespace Fawno\HiDANCE;
 
-	use SerialConnection\SerialConnection;
+	use Fawno\PhpSerial\SerialDio;
 
 	/**
 	 * @package Fawno\HiDANCE
@@ -14,14 +14,16 @@
 		 * @return void
 		 */
 		public function __construct (string $device) {
-			$this->serial = new SerialConnection;
-			$this->serial->setDevice($device);
-			$this->serial->setBaudRate('9600');
-			$this->serial->setParity('none');
-			$this->serial->setCharacterLength(8);
+			$this->serial = new SerialDio($device);
+			//$this->serial->setDevice($device);
+			$this->serial->setDataRate('9600');
+			$this->serial->setParity(0);
+			$this->serial->setDataBits(8);
 			$this->serial->setStopBits(1);
-			$this->serial->setFlowControl('none');
+			$this->serial->setFlowControl(0);
 			$this->serial->open();
+			$this->serial->setBlocking(0);
+			//$this->serial->setTimeout(0, 100000);
 		}
 
 		/**
@@ -38,6 +40,6 @@
 		public function sendAT (string $command = null) {
 			$message = ($command ? 'at+' . $command : 'at') . "\r\n";
 			$this->serial->send($message, true);
-			return $this->serial->readPort();
+			return $this->serial->read();
 		}
 	}

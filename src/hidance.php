@@ -29,7 +29,7 @@
 		public function record (string $filename) {
 			do {
 				do {
-					$buffer = $this->serial->readPort();
+					$buffer = $this->serial->read();
 				} while (!$buffer);
 
 				if (preg_match('~'  . self::SIGNAL_CONN . '|' . self::SIGNAL_DISC . '$~', $buffer)) {
@@ -50,7 +50,7 @@
 
 			do {
 				do {
-					$buffer .= $this->serial->readPort();
+					$buffer .= $this->serial->read();
 					//usleep(10000);
 				} while (!self::isSignal($buffer) and !self::isData($buffer));
 

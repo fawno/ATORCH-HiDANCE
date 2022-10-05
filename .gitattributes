@@ -17,7 +17,7 @@
 *.properties text
 *.txt text
 *.xml text
-*.svg text
+*.svg text eol=lf
 *.yml text
 .htaccess text
 
