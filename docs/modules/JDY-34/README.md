@@ -70,14 +70,14 @@ When JDY-34 is used as the SPP master, it supports connecting all SPP slave Blue
 [TOC](#table-of-contents)
 
 ### 2.3 SPPmulti-connected master, connecting 7 SPP slaves
-![SPP Multi-connected master](img/SPP-Multi-slaves.svg "SPP Multi-connected master")
+![SPP Multi-connected master](img/SPP-Multi-slaves.png "SPP Multi-connected master")
 
 SPP Multi-connected master
 
 [TOC](#table-of-contents)
 
 ### 2.4 SPP slave multi-connected mode supports simultaneous connection of 8 masters
-![Multi-connected slave](img/SPP-Multi-masters.svg "Multi-connected slave")
+![Multi-connected slave](img/SPP-Multi-masters.png "Multi-connected slave")
 
 Multi-connected slave supports 7 Android phones connected with 1 iOS phone, or 7 computers connected with 1 iOS phone.
 
