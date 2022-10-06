@@ -42,6 +42,14 @@
 	- [Settings / Queries - Serial port parity check bit](#settings--queries---serial-port-parity-check-bit)
 	- [Settings / Queries - SPP connection password](#settings--queries---spp-connection-password)
 	- [Settings / Queries - SPP connection password switch](#settings--queries---spp-connection-password-switch)
+	- [Settings / Queries - BLE Broadcast name](#settings--queries---ble-broadcast-name)
+	- [Settings / Queries - SPP Broadcast name](#settings--queries---spp-broadcast-name)
+	- [Settings - SPP master scans SPP slave](#settings---spp-master-scans-spp-slave)
+	- [Settings - SPP master actively stops searching](#settings---spp-master-actively-stops-searching)
+	- [Settings - SPP master specifies MAC address connection](#settings---spp-master-specifies-mac-address-connection)
+	- [Settings / Queries - SPP Bluetooth MAC address](#settings--queries---spp-bluetooth-mac-address)
+	- [Settings / Queries - SPP Bluetooth MAC address](#settings--queries---spp-bluetooth-mac-address-1)
+	- [Queries - Connection status](#queries---connection-status)
 - [6. BLE UUID attribute details](#6-ble-uuid-attribute-details)
 	- [BLE 16 bit UUID list](#ble-16-bit-uuid-list)
 	- [BLE 128 bit UUID list](#ble-128-bit-uuid-list)
@@ -397,7 +405,7 @@ It is enclosed in the data PCB file, which is 99SE version.
 | Instruction       | Response         | Parameter                   |
 |-------------------|------------------|-----------------------------|
 | AT+TYPE\<Param>   | OK               | Param: (0-1)<br> Default: 0 |
-| AT+TYPE           | +TYPE=\<Param> |                               |
+| AT+TYPE           | +TYPE=\<Param>   |                             |
 
 **Param:**
 | Value | Description                     |
@@ -410,6 +418,142 @@ It is enclosed in the data PCB file, which is 99SE version.
 > +TYPE=0 \
 > **AT+TYPE0** \
 > +OK
+
+[TOC](#table-of-contents)
+
+### Settings / Queries - BLE Broadcast name
+| Instruction       | Response         | Parameter                                                |
+|-------------------|------------------|----------------------------------------------------------|
+| AT+NAMB\<Param>   | OK               | Param: (Maximum length 18 bytes)<br> Default: JDY-34-BLE |
+| AT+NAMB           | +NAMB=\<Param>   |                                                          |
+
+**Example**
+> **AT+NAMB** \
+> +NAMB=JDY-34 \
+> **AT+NAMBJDY-34-BLE** \
+> +OK
+
+[TOC](#table-of-contents)
+
+### Settings / Queries - SPP Broadcast name
+| Instruction       | Response         | Parameter                                                |
+|-------------------|------------------|----------------------------------------------------------|
+| AT+NAME\<Param>   | OK               | Param: (Maximum length 18 bytes)<br> Default: JDY-34-SPP |
+| AT+NAME           | +NAME=\<Param>   |                                                          |
+
+**Example**
+> **AT+NAME** \
+> +NAME=JDY-34-SPP \
+> **AT+NAMEJDY-34-SPP** \
+> +OK
+
+[TOC](#table-of-contents)
+
+### Settings - SPP master scans SPP slave
+| Instruction | Response | Parameter |
+|-------------|----------|-----------|
+| AT+INQ      | OK       | Null      |
+
+**Example**
+> **AT+INQ**
+> +OK
+> +DEV:1=200427201431,JDY-34-SPP
+> +DEV:2=0D8888332211,JDY-33-SPP
+> +DEV:3=591019770006,JDY-34-SPP
+> +SINQ
+
+[TOC](#table-of-contents)
+
+### Settings - SPP master actively stops searching
+| Instruction | Response | Parameter |
+|-------------|----------|-----------|
+| AT+SINQ     | OK       | Null      |
+
+**Example**
+> **AT+SINQ**
+> +OK
+> +SINQ
+
+[TOC](#table-of-contents)
+
+### Settings - SPP master specifies MAC address connection
+| Instruction     | Response       | Parameter                         |
+|-----------------|----------------|-----------------------------------|
+| AT+CONA\<Param> | +OK            | Param: (MAC Hex character string) |
+
+**Param:**
+- Direct MAC address connection: Dev MAC
+
+**Examples:**
+> **AT+CONA200427201431**
+> OK
+> +CONNECTED>>0x200427201431,1
+
+Output information format description after connected, 0x200427201431 indicates the MAC address of the connected slave, 1 indicates the currently connected device ID number.
+
+[TOC](#table-of-contents)
+
+### Settings / Queries - SPP Bluetooth MAC address
+| Instruction      | Response        | Parameter                         |
+|------------------|-----------------|-----------------------------------|
+| AT+LADDR\<Param> | +OK             | Param: (MAC Hex character string) |
+| AT+LADDR         | +LADDR=\<Param> |                                   |
+
+**Examples:**
+> **AT+LADDR**
+> +LADDR=12345678913C
+> **AT+LADDR12345678913C**
+> +OK
+
+[TOC](#table-of-contents)
+
+### Settings / Queries - SPP Bluetooth MAC address
+| Instruction      | Response        | Parameter              |
+|------------------|-----------------|------------------------|
+| AT+DISC\<Param>  | +OK             | Param: (0-7 device ID) |
+| AT+DISC          | +DISC=\<Param>  |                        |
+
+**Note:**
+**Serial port sends AT+DISC to disconnect all connected devices. AT+DISC followed with device ID number means only to disconnect specified devices.**
+
+**Examples:**
+> **AT+DISC**
+> +DISCONNECTED-ID=0
+> +OK
+> **AT+DISC0**
+> +DISCONNECTED-ID=0
+> +OK
+
+[TOC](#table-of-contents)
+
+### Queries - Connection status
+| Instruction     | Response                | Parameter              |
+|-----------------|-------------------------|------------------------|
+| AT+STAT\<Param> | +STAT=\<Param>,\<State> | Param: (0-7 device ID) |
+| AT+STAT         | +STAT=\<Param>,\<State> | Connection state (0-1) |
+
+**Param:**
+| Value | Description   |
+|-------|---------------|
+|   0   | Not connected |
+|   1   | Connected     |
+
+**Note:**
+AT+STAT is to query the status of all devices. AT+STAT followed with the device ID, indicating that only the connection status of the specified device is queried.
+
+**Example**
+> **AT+STAT** \
+> +STAT=0,0
+> +STAT=1,0
+> +STAT=2,0
+> +STAT=3,0
+> +STAT=4,0
+> +STAT=5,0
+> +STAT=6,0
+> +STAT=7,0
+> +OK
+> **AT+STAT0**
+> +STAT=0,0
 
 [TOC](#table-of-contents)
 
