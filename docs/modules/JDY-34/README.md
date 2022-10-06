@@ -39,6 +39,13 @@
 	- [Restore factory configuration (revert to factory default configuration parameter)](#restore-factory-configuration-revert-to-factory-default-configuration-parameter)
 	- [Settings / Queries - Serial port status output enable](#settings--queries---serial-port-status-output-enable)
 	- [Settings / Queries - Baud rate](#settings--queries---baud-rate)
+	- [Settings / Queries - Serial port parity check bit](#settings--queries---serial-port-parity-check-bit)
+	- [Settings / Queries - SPP connection password](#settings--queries---spp-connection-password)
+	- [Settings / Queries - SPP connection password switch](#settings--queries---spp-connection-password-switch)
+- [6. BLE UUID attribute details](#6-ble-uuid-attribute-details)
+	- [BLE 16 bit UUID list](#ble-16-bit-uuid-list)
+	- [BLE 128 bit UUID list](#ble-128-bit-uuid-list)
+- [7. JDY-34 basic application wiring diagram](#7-jdy-34-basic-application-wiring-diagram)
 
 ## 1. Product brief introduction
 The JDY-34 transparent transmission module is based on Bluetooth BLE 4.2 protocol + 3.0 standard, which supports BLE and SPP working at the same time, and SPP supports multi connection and SPP master-slave working at the same time, and does not need to be separately configured as a master or slave function. In the multi-connected mode, SPP supports 7 master-slaves (Android or computer) to connect with 1 IOS mobile phone, and BLE also supports Android or IOS connection. In the master mode, it supports the connection and communication with all SPP slaves on the market, including JDY-30, JDY-31, JDY-32, JDY-33, printer, etc. The communication interface is standard UART, which can configure parameters such as working mode, baud rate, BLE Bluetooth UUID and pairing password through AT instruction. **The main advantage is high-speed communication. SPP supports data transmission and multi connection of 40kbyte per second after connecting with mobile phone or computer.**
@@ -316,7 +323,7 @@ It is enclosed in the data PCB file, which is 99SE version.
 [TOC](#table-of-contents)
 
 ### Settings / Queries - Baud rate
-:warning: **Note: the default baud rate of the module is: 115200**
+:warning: **Note: the default baud rate of the module is: 9600**
 | Instruction     | Response       | Parameter                  |
 |-----------------|----------------|----------------------------|
 | AT+BAUD\<Param> | +OK            | Param (1-F)<br> Default: 4 |
@@ -351,3 +358,81 @@ It is enclosed in the data PCB file, which is 99SE version.
 
 [TOC](#table-of-contents)
 
+### Settings / Queries - Serial port parity check bit
+| Instruction       | Response         | Parameter                   |
+|-------------------|------------------|-----------------------------|
+| AT+PARITY\<Param> | OK               | Param: (0-2)<br> Default: 0 |
+| AT+PARITY         | +PARITY=\<Param> |                             |
+
+**Param:**
+| Value | Description     |
+|:-----:|-----------------|
+|   0   | No parity bit   |
+|   1   | Odd parity bit  |
+|   2   | Even parity bit |
+
+**Example**
+> **AT+PARITY** \
+> +PARITY=0 \
+> **AT+PARITY0** \
+> +OK
+
+[TOC](#table-of-contents)
+
+### Settings / Queries - SPP connection password
+| Instruction       | Response         | Parameter                            |
+|-------------------|------------------|--------------------------------------|
+| AT+PIN\<Param>    | OK               | Param: (0000-9999)<br> Default: 1234 |
+| AT+PIN            | +PIN=\<Param>    |                                      |
+
+**Example**
+> **AT+PIN** \
+> +PIN=1234 \
+> **AT+PIN1234** \
+> +OK
+
+[TOC](#table-of-contents)
+
+### Settings / Queries - SPP connection password switch
+| Instruction       | Response         | Parameter                   |
+|-------------------|------------------|-----------------------------|
+| AT+TYPE\<Param>   | OK               | Param: (0-1)<br> Default: 0 |
+| AT+TYPE           | +TYPE=\<Param> |                               |
+
+**Param:**
+| Value | Description                     |
+|:-----:|---------------------------------|
+|   0   | SPP connection without password |
+|   1   | SPP connection with password    |
+
+**Example**
+> **AT+TYPE** \
+> +TYPE=0 \
+> **AT+TYPE0** \
+> +OK
+
+[TOC](#table-of-contents)
+
+## 6. BLE UUID attribute details
+### BLE 16 bit UUID list
+- Service UUID：FFE0 (Service UUID Default ffe0 User can modify)
+- Feature UUID：FFE1 (For transparent transmission Default ffe1 User can modify)
+- Feature UUID：FFE2 (For module function configuration)
+
+[TOC](#table-of-contents)
+
+### BLE 128 bit UUID list
+- Service UUID：E7810A71-73AE-499D-8C15-FAA9AEF0C3F2
+- Feature UUID：BEF8D6C9-9C21-499D-8C15-FAA9AEF0C3F2
+- Feature attribute：Notify, write without response
+
+[TOC](#table-of-contents)
+
+## 7. JDY-34 basic application wiring diagram
+Wiring diagram of serial port communication mode
+
+![Wiring diagram of serial port communication mode](img/1-wiring-diagram-of-serial-port-communication-mode.jpg "Wiring diagram of serial port communication mode")
+
+**Special note: For the connection between the stat pin of jdy-34 and the input pin of MCU, please add a diode**
+
+[TOC](#table-of-contents)
