@@ -455,11 +455,11 @@ It is enclosed in the data PCB file, which is 99SE version.
 | AT+INQ      | OK       | Null      |
 
 **Example**
-> **AT+INQ**
-> +OK
-> +DEV:1=200427201431,JDY-34-SPP
-> +DEV:2=0D8888332211,JDY-33-SPP
-> +DEV:3=591019770006,JDY-34-SPP
+> **AT+INQ** \
+> +OK \
+> +DEV:1=200427201431,JDY-34-SPP \
+> +DEV:2=0D8888332211,JDY-33-SPP \
+> +DEV:3=591019770006,JDY-34-SPP \
 > +SINQ
 
 [TOC](#table-of-contents)
@@ -470,8 +470,8 @@ It is enclosed in the data PCB file, which is 99SE version.
 | AT+SINQ     | OK       | Null      |
 
 **Example**
-> **AT+SINQ**
-> +OK
+> **AT+SINQ** \
+> +OK \
 > +SINQ
 
 [TOC](#table-of-contents)
@@ -485,8 +485,8 @@ It is enclosed in the data PCB file, which is 99SE version.
 - Direct MAC address connection: Dev MAC
 
 **Examples:**
-> **AT+CONA200427201431**
-> OK
+> **AT+CONA200427201431** \
+> OK \
 > +CONNECTED>>0x200427201431,1
 
 Output information format description after connected, 0x200427201431 indicates the MAC address of the connected slave, 1 indicates the currently connected device ID number.
@@ -500,9 +500,9 @@ Output information format description after connected, 0x200427201431 indicates 
 | AT+LADDR         | +LADDR=\<Param> |                                   |
 
 **Examples:**
-> **AT+LADDR**
-> +LADDR=12345678913C
-> **AT+LADDR12345678913C**
+> **AT+LADDR** \
+> +LADDR=12345678913C \
+> **AT+LADDR12345678913C** \
 > +OK
 
 [TOC](#table-of-contents)
@@ -517,11 +517,11 @@ Output information format description after connected, 0x200427201431 indicates 
 **Serial port sends AT+DISC to disconnect all connected devices. AT+DISC followed with device ID number means only to disconnect specified devices.**
 
 **Examples:**
-> **AT+DISC**
-> +DISCONNECTED-ID=0
-> +OK
-> **AT+DISC0**
-> +DISCONNECTED-ID=0
+> **AT+DISC** \
+> +DISCONNECTED-ID=0 \
+> +OK \
+> **AT+DISC0** \
+> +DISCONNECTED-ID=0 \
 > +OK
 
 [TOC](#table-of-contents)
@@ -543,16 +543,16 @@ AT+STAT is to query the status of all devices. AT+STAT followed with the device 
 
 **Example**
 > **AT+STAT** \
-> +STAT=0,0
-> +STAT=1,0
-> +STAT=2,0
-> +STAT=3,0
-> +STAT=4,0
-> +STAT=5,0
-> +STAT=6,0
-> +STAT=7,0
-> +OK
-> **AT+STAT0**
+> +STAT=0,0 \
+> +STAT=1,0 \
+> +STAT=2,0 \
+> +STAT=3,0 \
+> +STAT=4,0 \
+> +STAT=5,0 \
+> +STAT=6,0 \
+> +STAT=7,0 \
+> +OK \
+> **AT+STAT0** \
 > +STAT=0,0
 
 [TOC](#table-of-contents)
